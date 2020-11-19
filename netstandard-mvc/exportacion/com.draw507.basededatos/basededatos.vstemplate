@@ -1,0 +1,31 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>com.draw507.basededatos</Name>
+    <Description>basededatos</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>basededatos</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="com.draw507.basededatos.csproj" File="com.draw507.basededatos.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="App.Config">App.Config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="DM_NIIF_09Entities.cs">DM_NIIF_09Entities.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="EFUnidadDeTrabajo.cs">EFUnidadDeTrabajo.cs</ProjectItem>
+      <Folder Name="Interfaces" TargetFolderName="Interfaces">
+        <ProjectItem ReplaceParameters="true" TargetFileName="IRepositorio.cs">IRepositorio.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IUnidadDeTrabajo.cs">IUnidadDeTrabajo.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

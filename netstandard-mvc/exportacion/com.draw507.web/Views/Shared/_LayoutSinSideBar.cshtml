@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NIIF | Revision de datos</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    @Styles.Render("~/Content/css")
+    @*@if (HttpContext.Current.Request.RequestContext.RouteData.Values["controller"].ToString() != "Error")
+    {
+        <noscript>
+            <meta http-equiv="refresh" content="0;url=@Url.Action("DisableJavascript", "Error")" />
+        </noscript>
+    }*@
+</head>
+<body class="hold-transition login-page animated fadeIn hidden-print">
+    <div class="wrapper wrapper-full-page">
+        <nav class="navbar navbar-primary navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header logo">
+                    <a href="#" class="navbar-brand padding-0" style="width:145px !important">
+                        <img class="img-responsive" src="~/Images/logo.png" />
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="full-page login-page" filter-color="black">
+            <div class="main-content">
+                <div class="container">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @Html.Partial("_Spinner")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+

@@ -1,0 +1,60 @@
+﻿@helper ObtenerFiltros(string titulo, string exportType, string urlExport)
+{
+    <div id="busqueda" class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header" data-background-color="red">
+                    <h4 class="title">@titulo</h4>
+                </div>
+                <div class="card-content">
+                    <form id="frmFiltros">
+                        <div class="col-xs-3">
+                            <div class="form-group">
+                                <label class="bmd-label-floating">@$safeprojectname$.RecursosLocalizables.StringResources.BtnFiltroSistemaOrigen</label>
+                                <input type="text" class="form-control" name="sistemaorigen">
+                            </div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="form-group">
+                                <label class="bmd-label-floating">@$safeprojectname$.RecursosLocalizables.StringResources.BtnFiltroEnteCliente</label>
+                                <input type="text" class="form-control" name="entecliente">
+                            </div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="form-group">
+                                <label class="bmd-label-floating">@$safeprojectname$.RecursosLocalizables.StringResources.BtnFiltroIdCliente</label>
+                                <input type="text" class="form-control" name="idcliente">
+                            </div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="form-group">
+                                <label class="bmd-label-floating">@$safeprojectname$.RecursosLocalizables.StringResources.BtnFiltroNombreCliente</label>
+                                <input type="text" class="form-control" name="nombrecliente">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <a id="btnExportar" class="btn btn-info"><i class="material-icons">file_download</i> Exportar</a>
+                                @if(exportType == "EAD")
+                                {
+                                    <a id="btnExportarEAD" class="btn btn-info"><i class="material-icons">file_download</i> Saldos</a>
+                                }
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="pull-right">
+                                    <a id="btnLimpiar" class="btn btn-default">@$safeprojectname$.RecursosLocalizables.StringResources.BtnBorrar</a>
+                                    <a id="btnBuscar" class="btn btn-primary">@$safeprojectname$.RecursosLocalizables.StringResources.BtnBuscar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form id="frmExport" method="post" action="@urlExport" style="display:none">
+        <input type="hidden" name="export_type" value="@exportType" />
+    </form>
+
+}
+

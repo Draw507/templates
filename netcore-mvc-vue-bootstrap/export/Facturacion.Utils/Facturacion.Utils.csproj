@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="NodaTime" Version="3.0.0" />
+		<PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.14.0" />
+		<PackageReference Include="Microsoft.ApplicationInsights.DependencyCollector" Version="2.14.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.ApplicationInsights" Version="2.14.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\$ext_safeprojectname$.Entities\$ext_safeprojectname$.Entities.csproj" />
+	</ItemGroup>
+
+</Project>

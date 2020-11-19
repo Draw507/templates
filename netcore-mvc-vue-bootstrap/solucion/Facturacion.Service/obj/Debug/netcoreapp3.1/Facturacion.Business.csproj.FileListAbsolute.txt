@@ -1,0 +1,16 @@
+C:\projects\drobinson\templates\netcore-mvc-vue-bootstrap\solucion\Facturacion.Service\bin\Debug\netcoreapp3.1\Facturacion.Business.deps.json
+C:\projects\drobinson\templates\netcore-mvc-vue-bootstrap\solucion\Facturacion.Service\bin\Debug\netcoreapp3.1\Facturacion.Business.dll
+C:\projects\drobinson\templates\netcore-mvc-vue-bootstrap\solucion\Facturacion.Service\bin\Debug\netcoreapp3.1\Facturacion.Business.pdb
+C:\projects\drobinson\templates\netcore-mvc-vue-bootstrap\solucion\Facturacion.Service\bin\Debug\netcoreapp3.1\Facturacion.Entities.dll
+C:\projects\drobinson\templates\netcore-mvc-vue-bootstrap\solucion\Facturacion.Service\bin\Debug\netcoreapp3.1\Facturacion.Repository.dll
+C:\projects\drobinson\templates\netcore-mvc-vue-bootstrap\solucion\Facturacion.Service\bin\Debug\netcoreapp3.1\Facturacion.Utils.dll
+C:\projects\drobinson\templates\netcore-mvc-vue-bootstrap\solucion\Facturacion.Service\bin\Debug\netcoreapp3.1\Facturacion.Entities.pdb
+C:\projects\drobinson\templates\netcore-mvc-vue-bootstrap\solucion\Facturacion.Service\bin\Debug\netcoreapp3.1\Facturacion.Repository.pdb
+C:\projects\drobinson\templates\netcore-mvc-vue-bootstrap\solucion\Facturacion.Service\bin\Debug\netcoreapp3.1\Facturacion.Utils.pdb
+C:\projects\drobinson\templates\netcore-mvc-vue-bootstrap\solucion\Facturacion.Service\obj\Debug\netcoreapp3.1\Facturacion.Business.csprojAssemblyReference.cache
+C:\projects\drobinson\templates\netcore-mvc-vue-bootstrap\solucion\Facturacion.Service\obj\Debug\netcoreapp3.1\Facturacion.Business.AssemblyInfoInputs.cache
+C:\projects\drobinson\templates\netcore-mvc-vue-bootstrap\solucion\Facturacion.Service\obj\Debug\netcoreapp3.1\Facturacion.Business.AssemblyInfo.cs
+C:\projects\drobinson\templates\netcore-mvc-vue-bootstrap\solucion\Facturacion.Service\obj\Debug\netcoreapp3.1\Facturacion.Business.csproj.CoreCompileInputs.cache
+C:\projects\drobinson\templates\netcore-mvc-vue-bootstrap\solucion\Facturacion.Service\obj\Debug\netcoreapp3.1\Facturacion.Business.csproj.CopyComplete
+C:\projects\drobinson\templates\netcore-mvc-vue-bootstrap\solucion\Facturacion.Service\obj\Debug\netcoreapp3.1\Facturacion.Business.dll
+C:\projects\drobinson\templates\netcore-mvc-vue-bootstrap\solucion\Facturacion.Service\obj\Debug\netcoreapp3.1\Facturacion.Business.pdb

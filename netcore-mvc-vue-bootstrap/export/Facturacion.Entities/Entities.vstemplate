@@ -1,0 +1,34 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Facturacion.Entities</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Facturacion.Entities</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="Facturacion.Entities.csproj" File="Facturacion.Entities.csproj" ReplaceParameters="true">
+      <Folder Name="AttributesProperties" TargetFolderName="AttributesProperties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="OrderByDBAttributes.cs">OrderByDBAttributes.cs</ProjectItem>
+      </Folder>
+      <Folder Name="DTO" TargetFolderName="DTO">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ClienteDTO.cs">ClienteDTO.cs</ProjectItem>
+      </Folder>
+      <Folder Name="ViewModels" TargetFolderName="ViewModels">
+        <ProjectItem ReplaceParameters="true" TargetFileName="GridViewModel.cs">GridViewModel.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="CommonResponse.cs">CommonResponse.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ContactosFilters.cs">ContactosFilters.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ErrorDetails.cs">ErrorDetails.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="UserModel.cs">UserModel.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

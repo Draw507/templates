@@ -1,0 +1,33 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>com.draw507.entidades</Name>
+    <Description>entidades</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>entidades</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="com.draw507.entidades.csproj" File="com.draw507.entidades.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="AppException.cs">AppException.cs</ProjectItem>
+      <Folder Name="Connected Services" TargetFolderName="Connected Services" />
+      <Folder Name="DTO" TargetFolderName="DTO">
+        <ProjectItem ReplaceParameters="true" TargetFileName="UsuarioDTO.cs">UsuarioDTO.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Respuesta.cs">Respuesta.cs</ProjectItem>
+      <Folder Name="ViewModel" TargetFolderName="ViewModel">
+        <ProjectItem ReplaceParameters="true" TargetFileName="GridViewModel.cs">GridViewModel.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="UsuarioViewModel.cs">UsuarioViewModel.cs</ProjectItem>
+      </Folder>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

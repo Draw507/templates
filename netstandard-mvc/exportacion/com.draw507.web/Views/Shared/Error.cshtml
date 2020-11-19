@@ -1,0 +1,26 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    ViewBag.Title = "Error";
+    Layout = "~/Views/Shared/_LayoutSinSideBar.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header" data-background-color="red">
+                <h4 class="title">Error</h4>
+            </div>
+            <div class="card-content">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="error-content">
+                            <i class="fa fa-warning text-red"></i> Oops! @ViewBag.ErrorMessage
+                        </div>
+                    </div>
+                </div>
+                <a class="btn btn-default pull-right" href="#">@$safeprojectname$.RecursosLocalizables.StringResources.BtnInicio<div class="ripple-container"></div></a>
+            </div>
+        </div>
+    </div>
+</div>

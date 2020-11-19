@@ -1,0 +1,35 @@
+﻿<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Draw507 ASP.NET Solution MD</Name>
+    <Description>Backend Solution Template Material Design</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Draw507_Backend</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon></Icon>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection>
+      <ProjectTemplateLink ProjectName="$projectname$.basededatos">
+        com.draw507.basededatos\basededatos.vstemplate
+      </ProjectTemplateLink>
+      <ProjectTemplateLink ProjectName="$projectname$.entidades">
+        com.draw507.entidades\entidades.vstemplate
+      </ProjectTemplateLink>
+      <ProjectTemplateLink ProjectName="$projectname$.logica">
+        com.draw507.logica\logica.vstemplate
+      </ProjectTemplateLink>
+      <ProjectTemplateLink ProjectName="$projectname$.util">
+        com.draw507.util\util.vstemplate
+      </ProjectTemplateLink>
+      <ProjectTemplateLink ProjectName="$projectname$.web">
+        com.draw507.web\web.vstemplate
+      </ProjectTemplateLink>
+    </ProjectCollection>
+  </TemplateContent>
+</VSTemplate>

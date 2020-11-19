@@ -1,0 +1,301 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Facturacion.Web</Name>
+    <Description>NetCore MVC</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Facturacion.Web</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="Facturacion.Web.csproj" File="Facturacion.Web.csproj" ReplaceParameters="true">
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="launchSettings.json">launchSettings.json</ProjectItem>
+      </Folder>
+      <Folder Name="wwwroot" TargetFolderName="wwwroot">
+        <Folder Name="css" TargetFolderName="css">
+          <Folder Name="pages" TargetFolderName="pages">
+            <Folder Name="clientes" TargetFolderName="clientes">
+              <ProjectItem ReplaceParameters="true" TargetFileName="clientes.min.css">clientes.min.css</ProjectItem>
+            </Folder>
+          </Folder>
+          <Folder Name="site" TargetFolderName="site">
+            <ProjectItem ReplaceParameters="true" TargetFileName="app.css">app.css</ProjectItem>
+          </Folder>
+          <ProjectItem ReplaceParameters="true" TargetFileName="app.min.css">app.min.css</ProjectItem>
+        </Folder>
+        <Folder Name="fonts" TargetFolderName="fonts">
+          <ProjectItem ReplaceParameters="false" TargetFileName="fa-solid-900.eot">fa-solid-900.eot</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="fa-solid-900.svg">fa-solid-900.svg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="fa-solid-900.ttf">fa-solid-900.ttf</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="fa-solid-900.woff">fa-solid-900.woff</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="fa-solid-900.woff2">fa-solid-900.woff2</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="ionicons.ttf">ionicons.ttf</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Linearicons-Free.woff2">Linearicons-Free.woff2</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Pe-icon-7-stroke.eot">Pe-icon-7-stroke.eot</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Pe-icon-7-stroke.svg">Pe-icon-7-stroke.svg</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Pe-icon-7-stroke.ttf">Pe-icon-7-stroke.ttf</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Pe-icon-7-stroke.woff">Pe-icon-7-stroke.woff</ProjectItem>
+        </Folder>
+        <Folder Name="images" TargetFolderName="images">
+          <Folder Name="cork" TargetFolderName="cork">
+            <ProjectItem ReplaceParameters="false" TargetFileName="120x120.jpg">120x120.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="1280x857.jpg">1280x857.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="175x115.jpg">175x115.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="200x200.jpg">200x200.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="300x300.jpg">300x300.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="350x250.jpg">350x250.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="400x168.jpg">400x168.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="400x300.jpg">400x300.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="509x343.jpg">509x343.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="600x300.jpg">600x300.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="640x426.jpg">640x426.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="90x90.jpg">90x90.jpg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="ab-1.jpeg">ab-1.jpeg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="arrow-down.png">arrow-down.png</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="bg.png">bg.png</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="ca.png">ca.png</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="contact-us-map-pin.svg">contact-us-map-pin.svg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="de.png">de.png</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="faq.svg">faq.svg</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="favicon.ico">favicon.ico</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="fr.png">fr.png</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="jp.png">jp.png</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="mindset.svg">mindset.svg</ProjectItem>
+          </Folder>
+        </Folder>
+        <Folder Name="js" TargetFolderName="js">
+          <Folder Name="pages" TargetFolderName="pages">
+            <Folder Name="clientes" TargetFolderName="clientes">
+              <ProjectItem ReplaceParameters="true" TargetFileName="clientes.js">clientes.js</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="clientes.min.js">clientes.min.js</ProjectItem>
+            </Folder>
+          </Folder>
+          <ProjectItem ReplaceParameters="true" TargetFileName="app.js">app.js</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="app.min.js">app.min.js</ProjectItem>
+        </Folder>
+        <Folder Name="lib" TargetFolderName="lib">
+          <Folder Name="animate" TargetFolderName="animate">
+            <ProjectItem ReplaceParameters="true" TargetFileName="animate.min.css">animate.min.css</ProjectItem>
+          </Folder>
+          <Folder Name="axios" TargetFolderName="axios">
+            <ProjectItem ReplaceParameters="true" TargetFileName="axios.js">axios.js</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="axios.map">axios.map</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="axios.min.js">axios.min.js</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="axios.min.map">axios.min.map</ProjectItem>
+          </Folder>
+          <Folder Name="bootstrap" TargetFolderName="bootstrap">
+            <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.css">bootstrap.css</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.js">bootstrap.js</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.min.css">bootstrap.min.css</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.min.js">bootstrap.min.js</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="popper.min.js">popper.min.js</ProjectItem>
+          </Folder>
+          <Folder Name="cork" TargetFolderName="cork">
+            <Folder Name="authentication" TargetFolderName="authentication">
+              <ProjectItem ReplaceParameters="true" TargetFileName="form-1.css">form-1.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="form-1.js">form-1.js</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="form-2.css">form-2.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="form-2.js">form-2.js</ProjectItem>
+            </Folder>
+            <Folder Name="forms" TargetFolderName="forms">
+              <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap-form.css">bootstrap-form.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="custom-clipboard.css">custom-clipboard.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="switches.css">switches.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="theme-checkbox-radio.css">theme-checkbox-radio.css</ProjectItem>
+            </Folder>
+            <ProjectItem ReplaceParameters="true" TargetFileName="app.js">app.js</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="custom.js">custom.js</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="main.css">main.css</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="structure.css">structure.css</ProjectItem>
+          </Folder>
+          <Folder Name="data-tables" TargetFolderName="data-tables">
+            <ProjectItem ReplaceParameters="true" TargetFileName="dataTables.bootstrap4.css">dataTables.bootstrap4.css</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="dataTables.bootstrap4.js">dataTables.bootstrap4.js</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="dataTables.bootstrap4.min.css">dataTables.bootstrap4.min.css</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="dataTables.bootstrap4.min.js">dataTables.bootstrap4.min.js</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="datatables.css">datatables.css</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="datatables.js">datatables.js</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="datatables.min.css">datatables.min.css</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="datatables.min.js">datatables.min.js</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="dataTables.responsive.js">dataTables.responsive.js</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="dataTables.responsive.min.js">dataTables.responsive.min.js</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="dt-global_style.css">dt-global_style.css</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="responsive.bootstrap4.css">responsive.bootstrap4.css</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="responsive.bootstrap4.js">responsive.bootstrap4.js</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="responsive.bootstrap4.min.css">responsive.bootstrap4.min.css</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="responsive.bootstrap4.min.js">responsive.bootstrap4.min.js</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="responsive.dataTables.css">responsive.dataTables.css</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="responsive.dataTables.min.css">responsive.dataTables.min.css</ProjectItem>
+          </Folder>
+          <Folder Name="highlight" TargetFolderName="highlight">
+            <Folder Name="styles" TargetFolderName="styles">
+              <ProjectItem ReplaceParameters="true" TargetFileName="a11y-dark.css">a11y-dark.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="a11y-light.css">a11y-light.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="agate.css">agate.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="androidstudio.css">androidstudio.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="an-old-hope.css">an-old-hope.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="arduino-light.css">arduino-light.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="arta.css">arta.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="ascetic.css">ascetic.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="atelier-cave-dark.css">atelier-cave-dark.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="atelier-cave-light.css">atelier-cave-light.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="atelier-dune-dark.css">atelier-dune-dark.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="atelier-dune-light.css">atelier-dune-light.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="atelier-estuary-dark.css">atelier-estuary-dark.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="atelier-estuary-light.css">atelier-estuary-light.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="atelier-forest-dark.css">atelier-forest-dark.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="atelier-forest-light.css">atelier-forest-light.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="atelier-heath-dark.css">atelier-heath-dark.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="atelier-heath-light.css">atelier-heath-light.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="atelier-lakeside-dark.css">atelier-lakeside-dark.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="atelier-lakeside-light.css">atelier-lakeside-light.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="atelier-plateau-dark.css">atelier-plateau-dark.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="atelier-plateau-light.css">atelier-plateau-light.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="atelier-savanna-dark.css">atelier-savanna-dark.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="atelier-savanna-light.css">atelier-savanna-light.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="atelier-seaside-dark.css">atelier-seaside-dark.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="atelier-seaside-light.css">atelier-seaside-light.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="atelier-sulphurpool-dark.css">atelier-sulphurpool-dark.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="atelier-sulphurpool-light.css">atelier-sulphurpool-light.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="atom-one-dark.css">atom-one-dark.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="atom-one-dark-reasonable.css">atom-one-dark-reasonable.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="atom-one-light.css">atom-one-light.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="brown-paper.css">brown-paper.css</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="brown-papersq.png">brown-papersq.png</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="codepen-embed.css">codepen-embed.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="color-brewer.css">color-brewer.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="darcula.css">darcula.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="dark.css">dark.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="darkula.css">darkula.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="default.css">default.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="docco.css">docco.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="dracula.css">dracula.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="far.css">far.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="foundation.css">foundation.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="github.css">github.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="github-gist.css">github-gist.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="gml.css">gml.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="googlecode.css">googlecode.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="grayscale.css">grayscale.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="gruvbox-dark.css">gruvbox-dark.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="gruvbox-light.css">gruvbox-light.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="hopscotch.css">hopscotch.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="hybrid.css">hybrid.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="idea.css">idea.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="ir-black.css">ir-black.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="isbl-editor-dark.css">isbl-editor-dark.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="isbl-editor-light.css">isbl-editor-light.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="kimbie.dark.css">kimbie.dark.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="kimbie.light.css">kimbie.light.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="lightfair.css">lightfair.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="magula.css">magula.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="mono-blue.css">mono-blue.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="monokai.css">monokai.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="monokai-sublime.css">monokai-sublime.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="nord.css">nord.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="obsidian.css">obsidian.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="ocean.css">ocean.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="paraiso-dark.css">paraiso-dark.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="paraiso-light.css">paraiso-light.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="pojoaque.css">pojoaque.css</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="pojoaque.jpg">pojoaque.jpg</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="purebasic.css">purebasic.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="qtcreator_dark.css">qtcreator_dark.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="qtcreator_light.css">qtcreator_light.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="railscasts.css">railscasts.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="rainbow.css">rainbow.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="routeros.css">routeros.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="school-book.css">school-book.css</ProjectItem>
+              <ProjectItem ReplaceParameters="false" TargetFileName="school-book.png">school-book.png</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="shades-of-purple.css">shades-of-purple.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="solarized-dark.css">solarized-dark.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="solarized-light.css">solarized-light.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="sunburst.css">sunburst.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="tomorrow.css">tomorrow.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="tomorrow-night.css">tomorrow-night.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="tomorrow-night-blue.css">tomorrow-night-blue.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="tomorrow-night-bright.css">tomorrow-night-bright.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="tomorrow-night-eighties.css">tomorrow-night-eighties.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="vs.css">vs.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="vs2015.css">vs2015.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="xcode.css">xcode.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="xt256.css">xt256.css</ProjectItem>
+              <ProjectItem ReplaceParameters="true" TargetFileName="zenburn.css">zenburn.css</ProjectItem>
+            </Folder>
+            <ProjectItem ReplaceParameters="true" TargetFileName="highlight.pack.js">highlight.pack.js</ProjectItem>
+          </Folder>
+          <Folder Name="jquery" TargetFolderName="jquery">
+            <ProjectItem ReplaceParameters="true" TargetFileName="jquery-3.1.1.min.js">jquery-3.1.1.min.js</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="jquery-ui.js">jquery-ui.js</ProjectItem>
+          </Folder>
+          <Folder Name="perfect-scrollbar" TargetFolderName="perfect-scrollbar">
+            <ProjectItem ReplaceParameters="true" TargetFileName="perfect-scrollbar.css">perfect-scrollbar.css</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="perfect-scrollbar.min.js">perfect-scrollbar.min.js</ProjectItem>
+          </Folder>
+          <Folder Name="vue" TargetFolderName="vue">
+            <ProjectItem ReplaceParameters="true" TargetFileName="vue.min.js">vue.min.js</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="vue-dev.js">vue-dev.js</ProjectItem>
+          </Folder>
+        </Folder>
+        <ProjectItem ReplaceParameters="false" TargetFileName="favicon.ico">favicon.ico</ProjectItem>
+      </Folder>
+      <Folder Name="Controllers" TargetFolderName="Controllers">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AccountController.cs">AccountController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ContactosController.cs">ContactosController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ErrorsController.cs">ErrorsController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="HomeController.cs">HomeController.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Extensions" TargetFolderName="Extensions">
+        <ProjectItem ReplaceParameters="true" TargetFileName="GlobalExceptionHandlerExtension.cs">GlobalExceptionHandlerExtension.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Helpers" TargetFolderName="Helpers">
+        <ProjectItem ReplaceParameters="true" TargetFileName="HelpersController.cs">HelpersController.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Models" TargetFolderName="Models">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ErrorViewModel.cs">ErrorViewModel.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Views" TargetFolderName="Views">
+        <Folder Name="Account" TargetFolderName="Account">
+          <ProjectItem ReplaceParameters="true" TargetFileName="Login.cshtml">Login.cshtml</ProjectItem>
+        </Folder>
+        <Folder Name="Contactos" TargetFolderName="Contactos">
+          <ProjectItem ReplaceParameters="true" TargetFileName="Index.cshtml">Index.cshtml</ProjectItem>
+        </Folder>
+        <Folder Name="Home" TargetFolderName="Home">
+          <ProjectItem ReplaceParameters="true" TargetFileName="Index.cshtml">Index.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Privacy.cshtml">Privacy.cshtml</ProjectItem>
+        </Folder>
+        <Folder Name="Shared" TargetFolderName="Shared">
+          <Folder Name="Layout" TargetFolderName="Layout">
+            <ProjectItem ReplaceParameters="true" TargetFileName="_Footer.cshtml">_Footer.cshtml</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="_Header.cshtml">_Header.cshtml</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="_Sidebar.cshtml">_Sidebar.cshtml</ProjectItem>
+          </Folder>
+          <ProjectItem ReplaceParameters="true" TargetFileName="_Layout.cshtml">_Layout.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="_Loading.cshtml">_Loading.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="_ValidationScriptsPartial.cshtml">_ValidationScriptsPartial.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Error.cshtml">Error.cshtml</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="_ViewImports.cshtml">_ViewImports.cshtml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="_ViewStart.cshtml">_ViewStart.cshtml</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="appsettings.Development.json">appsettings.Development.json</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="appsettings.Development.local.json">appsettings.Development.local.json</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="appsettings.json">appsettings.json</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="gulpbundleconfig.json">gulpbundleconfig.json</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="gulpfile.js">gulpfile.js</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="package.json">package.json</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="package-lock.json">package-lock.json</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Program.cs">Program.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Startup.cs">Startup.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

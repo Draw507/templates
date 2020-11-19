@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+    <Metadata>
+        <Identity Id="2129cb21-4ccb-4baf-b8d7-f7bc4936e68b" Version="1.0" Language="en-US" Publisher="David Robinson" />
+        <DisplayName>Draw507 MVC Standard Template</DisplayName>
+        <Description xml:space="preserve">Plantilla para la creación de un proyecto ASP.NET MVC Standard</Description>
+        <MoreInfo>https://github.com/Draw507/vsix2019Standard</MoreInfo>
+        <Tags>asp.net mvc web c#</Tags>
+    </Metadata>
+    <Installation>
+        <InstallationTarget Version="[16.0,17.0)" Id="Microsoft.VisualStudio.Community" />
+        <InstallationTarget Version="[16.0,17.0)" Id="Microsoft.VisualStudio.Pro" />
+        <InstallationTarget Version="[16.0,17.0)" Id="Microsoft.VisualStudio.Enterprise" />
+    </Installation>
+    <Dependencies>
+        <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+    </Dependencies>
+    <Assets>
+        <Asset d:Source="File" Path="ProjectTemplates" Type="Microsoft.VisualStudio.ProjectTemplate" TargetVersion="1.0.0" d:TargetPath="ProjectTemplates\exportacion.zip" />
+    </Assets>
+    <Prerequisites>
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[16.1.28811.260,17.0)" DisplayName="Editor de núcleo de Visual Studio" />
+    </Prerequisites>
+</PackageManifest>

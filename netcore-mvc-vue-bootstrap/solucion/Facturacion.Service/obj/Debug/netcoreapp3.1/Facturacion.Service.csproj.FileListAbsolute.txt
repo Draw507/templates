@@ -1,0 +1,16 @@
+C:\projects\drobinson\administracion\web-app\Facturacion.Service\bin\Debug\netcoreapp3.1\Facturacion.Service.deps.json
+C:\projects\drobinson\administracion\web-app\Facturacion.Service\bin\Debug\netcoreapp3.1\Facturacion.Service.dll
+C:\projects\drobinson\administracion\web-app\Facturacion.Service\bin\Debug\netcoreapp3.1\Facturacion.Service.pdb
+C:\projects\drobinson\administracion\web-app\Facturacion.Service\bin\Debug\netcoreapp3.1\Facturacion.Entities.dll
+C:\projects\drobinson\administracion\web-app\Facturacion.Service\bin\Debug\netcoreapp3.1\Facturacion.Repository.dll
+C:\projects\drobinson\administracion\web-app\Facturacion.Service\bin\Debug\netcoreapp3.1\Facturacion.Utils.dll
+C:\projects\drobinson\administracion\web-app\Facturacion.Service\bin\Debug\netcoreapp3.1\Facturacion.Entities.pdb
+C:\projects\drobinson\administracion\web-app\Facturacion.Service\bin\Debug\netcoreapp3.1\Facturacion.Repository.pdb
+C:\projects\drobinson\administracion\web-app\Facturacion.Service\bin\Debug\netcoreapp3.1\Facturacion.Utils.pdb
+C:\projects\drobinson\administracion\web-app\Facturacion.Service\obj\Debug\netcoreapp3.1\Facturacion.Service.csprojAssemblyReference.cache
+C:\projects\drobinson\administracion\web-app\Facturacion.Service\obj\Debug\netcoreapp3.1\Facturacion.Service.AssemblyInfoInputs.cache
+C:\projects\drobinson\administracion\web-app\Facturacion.Service\obj\Debug\netcoreapp3.1\Facturacion.Service.AssemblyInfo.cs
+C:\projects\drobinson\administracion\web-app\Facturacion.Service\obj\Debug\netcoreapp3.1\Facturacion.Service.csproj.CoreCompileInputs.cache
+C:\projects\drobinson\administracion\web-app\Facturacion.Service\obj\Debug\netcoreapp3.1\Facturacion.Service.csproj.CopyComplete
+C:\projects\drobinson\administracion\web-app\Facturacion.Service\obj\Debug\netcoreapp3.1\Facturacion.Service.dll
+C:\projects\drobinson\administracion\web-app\Facturacion.Service\obj\Debug\netcoreapp3.1\Facturacion.Service.pdb

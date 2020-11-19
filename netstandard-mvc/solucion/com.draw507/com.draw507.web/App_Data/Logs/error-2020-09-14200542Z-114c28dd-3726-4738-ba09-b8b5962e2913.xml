@@ -1,0 +1,195 @@
+﻿<error errorId="114c28dd-3726-4738-ba09-b8b5962e2913" application="/LM/W3SVC/3/ROOT" host="DESKTOP-I56IUMU" type="System.Web.HttpException" message="The following sections have been defined but have not been rendered for the layout page &quot;~/Views/Shared/_Layout.cshtml&quot;: &quot;sideBar&quot;." source="System.Web.WebPages" detail="System.Web.HttpException (0x80004005): The following sections have been defined but have not been rendered for the layout page &quot;~/Views/Shared/_Layout.cshtml&quot;: &quot;sideBar&quot;.&#xD;&#xA;   at System.Web.WebPages.WebPageBase.VerifyRenderedBodyOrSections()&#xD;&#xA;   at System.Web.WebPages.WebPageBase.PopContext()&#xD;&#xA;   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)&#xD;&#xA;   at System.Web.WebPages.WebPageBase.&lt;&gt;c__DisplayClass40_0.&lt;RenderPageCore&gt;b__0(TextWriter writer)&#xD;&#xA;   at System.Web.WebPages.HelperResult.WriteTo(TextWriter writer)&#xD;&#xA;   at System.Web.WebPages.WebPageBase.Write(HelperResult result)&#xD;&#xA;   at System.Web.WebPages.WebPageBase.RenderSurrounding(String partialViewName, Action`1 body)&#xD;&#xA;   at System.Web.WebPages.WebPageBase.PopContext()&#xD;&#xA;   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)&#xD;&#xA;   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)&#xD;&#xA;   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)&#xD;&#xA;   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass3_6.&lt;BeginInvokeAction&gt;b__3()&#xD;&#xA;   at System.Web.Mvc.Async.AsyncControllerActionInvoker.&lt;&gt;c__DisplayClass3_1.&lt;BeginInvokeAction&gt;b__5(IAsyncResult asyncResult)" time="2020-09-14T20:05:42.2735700Z" statusCode="500">
+  <serverVariables>
+    <item name="ALL_HTTP">
+      <value string="HTTP_CACHE_CONTROL:max-age=0&#xD;&#xA;HTTP_CONNECTION:keep-alive&#xD;&#xA;HTTP_ACCEPT:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9&#xD;&#xA;HTTP_ACCEPT_ENCODING:gzip, deflate, br&#xD;&#xA;HTTP_ACCEPT_LANGUAGE:es-PA,es-419;q=0.9,es;q=0.8,en;q=0.7,pt;q=0.6&#xD;&#xA;HTTP_COOKIE:session_id=6e5c22f9a4771625e09a333fbe58696819cee317; __RequestVerificationToken_L2NvbS5jYWphZGVhaG9ycm9zLnJlZXN0cnVjdHVyYWNpb24ud2Vi0=I2MrAgC6UROLbb6ziUZYU2ZUBN29OPp5UWwa-rnhEwwB5Mw9ZJnFD12t648Z_FiQguaFGHMjKMmRIhxLWLyNXQDWs0OtC54aHNBubKKuYwc1; ASP.NET_SessionId=5clul0aar1gkbfpwubjtbawo; .AspNetCore.Culture=c%3Des-ES%7Cuic%3Des-ES; .AspNet.ApplicationCookie=f6sMvEKtcomXOwJyQpNrfXadPCE5BDaHhJAF84XL-T0_fBX_Ntb4eXfylbRGyHhCh8vjqTLj8yZ-oPqbviiyWL9u-6BHNllpi5qExI9oeUd7xkoDvDcui7muXXLZT_h-sj0wNzbWXaKcKXHCo_AhVc3vsdx0DHjenTj_lZ7DWmzJ_B4b7fUxa9R3SjV42UCuDDTgJEhEYSJaGeeC3LEK9USK2XjAd9NLcngA3inQ1gL5bDCUbdY5eMIcCswPHOKbLgWeiyJt7lJTxfcTVx3gBQ9Nsa-glK2D_lMLEUTopH1aDfFRjGSFxc3SilBszH245KP0KaggklnPHo15x82EHLYpB7NdClAvWZN8VeGRuT4; __RequestVerificationToken=mT2gnbJTKhFuwVMKPIqjwBFniuJe_Z7RbDD4CQhvwAOYb6e5iaMXg9ROfbp3lCuORcgQX3LPMjerBpNsrY1To4YCw1SmWPRaIvT21fR5S8I1&#xD;&#xA;HTTP_HOST:localhost:58754&#xD;&#xA;HTTP_USER_AGENT:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36&#xD;&#xA;HTTP_UPGRADE_INSECURE_REQUESTS:1&#xD;&#xA;HTTP_SEC_FETCH_SITE:none&#xD;&#xA;HTTP_SEC_FETCH_MODE:navigate&#xD;&#xA;HTTP_SEC_FETCH_USER:?1&#xD;&#xA;HTTP_SEC_FETCH_DEST:document&#xD;&#xA;" />
+    </item>
+    <item name="ALL_RAW">
+      <value string="Cache-Control: max-age=0&#xD;&#xA;Connection: keep-alive&#xD;&#xA;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9&#xD;&#xA;Accept-Encoding: gzip, deflate, br&#xD;&#xA;Accept-Language: es-PA,es-419;q=0.9,es;q=0.8,en;q=0.7,pt;q=0.6&#xD;&#xA;Cookie: session_id=6e5c22f9a4771625e09a333fbe58696819cee317; __RequestVerificationToken_L2NvbS5jYWphZGVhaG9ycm9zLnJlZXN0cnVjdHVyYWNpb24ud2Vi0=I2MrAgC6UROLbb6ziUZYU2ZUBN29OPp5UWwa-rnhEwwB5Mw9ZJnFD12t648Z_FiQguaFGHMjKMmRIhxLWLyNXQDWs0OtC54aHNBubKKuYwc1; ASP.NET_SessionId=5clul0aar1gkbfpwubjtbawo; .AspNetCore.Culture=c%3Des-ES%7Cuic%3Des-ES; .AspNet.ApplicationCookie=f6sMvEKtcomXOwJyQpNrfXadPCE5BDaHhJAF84XL-T0_fBX_Ntb4eXfylbRGyHhCh8vjqTLj8yZ-oPqbviiyWL9u-6BHNllpi5qExI9oeUd7xkoDvDcui7muXXLZT_h-sj0wNzbWXaKcKXHCo_AhVc3vsdx0DHjenTj_lZ7DWmzJ_B4b7fUxa9R3SjV42UCuDDTgJEhEYSJaGeeC3LEK9USK2XjAd9NLcngA3inQ1gL5bDCUbdY5eMIcCswPHOKbLgWeiyJt7lJTxfcTVx3gBQ9Nsa-glK2D_lMLEUTopH1aDfFRjGSFxc3SilBszH245KP0KaggklnPHo15x82EHLYpB7NdClAvWZN8VeGRuT4; __RequestVerificationToken=mT2gnbJTKhFuwVMKPIqjwBFniuJe_Z7RbDD4CQhvwAOYb6e5iaMXg9ROfbp3lCuORcgQX3LPMjerBpNsrY1To4YCw1SmWPRaIvT21fR5S8I1&#xD;&#xA;Host: localhost:58754&#xD;&#xA;User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36&#xD;&#xA;Upgrade-Insecure-Requests: 1&#xD;&#xA;Sec-Fetch-Site: none&#xD;&#xA;Sec-Fetch-Mode: navigate&#xD;&#xA;Sec-Fetch-User: ?1&#xD;&#xA;Sec-Fetch-Dest: document&#xD;&#xA;" />
+    </item>
+    <item name="APPL_MD_PATH">
+      <value string="/LM/W3SVC/3/ROOT" />
+    </item>
+    <item name="APPL_PHYSICAL_PATH">
+      <value string="C:\projects\drobinson\template\solucion\com.draw507\com.draw507.web\" />
+    </item>
+    <item name="AUTH_TYPE">
+      <value string="" />
+    </item>
+    <item name="AUTH_USER">
+      <value string="" />
+    </item>
+    <item name="AUTH_PASSWORD">
+      <value string="*****" />
+    </item>
+    <item name="LOGON_USER">
+      <value string="" />
+    </item>
+    <item name="REMOTE_USER">
+      <value string="" />
+    </item>
+    <item name="CERT_COOKIE">
+      <value string="" />
+    </item>
+    <item name="CERT_FLAGS">
+      <value string="" />
+    </item>
+    <item name="CERT_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="CERT_SERIALNUMBER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="CERT_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CERT_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="CONTENT_LENGTH">
+      <value string="0" />
+    </item>
+    <item name="CONTENT_TYPE">
+      <value string="" />
+    </item>
+    <item name="GATEWAY_INTERFACE">
+      <value string="CGI/1.1" />
+    </item>
+    <item name="HTTPS">
+      <value string="off" />
+    </item>
+    <item name="HTTPS_KEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SECRETKEYSIZE">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_ISSUER">
+      <value string="" />
+    </item>
+    <item name="HTTPS_SERVER_SUBJECT">
+      <value string="" />
+    </item>
+    <item name="INSTANCE_ID">
+      <value string="3" />
+    </item>
+    <item name="INSTANCE_META_PATH">
+      <value string="/LM/W3SVC/3" />
+    </item>
+    <item name="LOCAL_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="PATH_INFO">
+      <value string="/" />
+    </item>
+    <item name="PATH_TRANSLATED">
+      <value string="C:\projects\drobinson\template\solucion\com.draw507\com.draw507.web" />
+    </item>
+    <item name="QUERY_STRING">
+      <value string="" />
+    </item>
+    <item name="REMOTE_ADDR">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_HOST">
+      <value string="::1" />
+    </item>
+    <item name="REMOTE_PORT">
+      <value string="63802" />
+    </item>
+    <item name="REQUEST_METHOD">
+      <value string="GET" />
+    </item>
+    <item name="SCRIPT_NAME">
+      <value string="/" />
+    </item>
+    <item name="SERVER_NAME">
+      <value string="localhost" />
+    </item>
+    <item name="SERVER_PORT">
+      <value string="58754" />
+    </item>
+    <item name="SERVER_PORT_SECURE">
+      <value string="0" />
+    </item>
+    <item name="SERVER_PROTOCOL">
+      <value string="HTTP/1.1" />
+    </item>
+    <item name="SERVER_SOFTWARE">
+      <value string="Microsoft-IIS/10.0" />
+    </item>
+    <item name="URL">
+      <value string="/" />
+    </item>
+    <item name="HTTP_CACHE_CONTROL">
+      <value string="max-age=0" />
+    </item>
+    <item name="HTTP_CONNECTION">
+      <value string="keep-alive" />
+    </item>
+    <item name="HTTP_ACCEPT">
+      <value string="text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" />
+    </item>
+    <item name="HTTP_ACCEPT_ENCODING">
+      <value string="gzip, deflate, br" />
+    </item>
+    <item name="HTTP_ACCEPT_LANGUAGE">
+      <value string="es-PA,es-419;q=0.9,es;q=0.8,en;q=0.7,pt;q=0.6" />
+    </item>
+    <item name="HTTP_COOKIE">
+      <value string="session_id=6e5c22f9a4771625e09a333fbe58696819cee317; __RequestVerificationToken_L2NvbS5jYWphZGVhaG9ycm9zLnJlZXN0cnVjdHVyYWNpb24ud2Vi0=I2MrAgC6UROLbb6ziUZYU2ZUBN29OPp5UWwa-rnhEwwB5Mw9ZJnFD12t648Z_FiQguaFGHMjKMmRIhxLWLyNXQDWs0OtC54aHNBubKKuYwc1; ASP.NET_SessionId=5clul0aar1gkbfpwubjtbawo; .AspNetCore.Culture=c%3Des-ES%7Cuic%3Des-ES; .AspNet.ApplicationCookie=f6sMvEKtcomXOwJyQpNrfXadPCE5BDaHhJAF84XL-T0_fBX_Ntb4eXfylbRGyHhCh8vjqTLj8yZ-oPqbviiyWL9u-6BHNllpi5qExI9oeUd7xkoDvDcui7muXXLZT_h-sj0wNzbWXaKcKXHCo_AhVc3vsdx0DHjenTj_lZ7DWmzJ_B4b7fUxa9R3SjV42UCuDDTgJEhEYSJaGeeC3LEK9USK2XjAd9NLcngA3inQ1gL5bDCUbdY5eMIcCswPHOKbLgWeiyJt7lJTxfcTVx3gBQ9Nsa-glK2D_lMLEUTopH1aDfFRjGSFxc3SilBszH245KP0KaggklnPHo15x82EHLYpB7NdClAvWZN8VeGRuT4; __RequestVerificationToken=mT2gnbJTKhFuwVMKPIqjwBFniuJe_Z7RbDD4CQhvwAOYb6e5iaMXg9ROfbp3lCuORcgQX3LPMjerBpNsrY1To4YCw1SmWPRaIvT21fR5S8I1" />
+    </item>
+    <item name="HTTP_HOST">
+      <value string="localhost:58754" />
+    </item>
+    <item name="HTTP_USER_AGENT">
+      <value string="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" />
+    </item>
+    <item name="HTTP_UPGRADE_INSECURE_REQUESTS">
+      <value string="1" />
+    </item>
+    <item name="HTTP_SEC_FETCH_SITE">
+      <value string="none" />
+    </item>
+    <item name="HTTP_SEC_FETCH_MODE">
+      <value string="navigate" />
+    </item>
+    <item name="HTTP_SEC_FETCH_USER">
+      <value string="?1" />
+    </item>
+    <item name="HTTP_SEC_FETCH_DEST">
+      <value string="document" />
+    </item>
+    <item name="HTTP_APPLICATIONINSIGHTS_REQUESTTRACKINGTELEMETRYMODULE_ROOTREQUEST_ID">
+      <value string="edc2afa4-a6ed-4d9d-8765-a17a17428518" />
+    </item>
+  </serverVariables>
+  <cookies>
+    <item name="session_id">
+      <value string="6e5c22f9a4771625e09a333fbe58696819cee317" />
+    </item>
+    <item name="__RequestVerificationToken_L2NvbS5jYWphZGVhaG9ycm9zLnJlZXN0cnVjdHVyYWNpb24ud2Vi0">
+      <value string="I2MrAgC6UROLbb6ziUZYU2ZUBN29OPp5UWwa-rnhEwwB5Mw9ZJnFD12t648Z_FiQguaFGHMjKMmRIhxLWLyNXQDWs0OtC54aHNBubKKuYwc1" />
+    </item>
+    <item name="ASP.NET_SessionId">
+      <value string="5clul0aar1gkbfpwubjtbawo" />
+    </item>
+    <item name=".AspNetCore.Culture">
+      <value string="c%3Des-ES%7Cuic%3Des-ES" />
+    </item>
+    <item name=".AspNet.ApplicationCookie">
+      <value string="f6sMvEKtcomXOwJyQpNrfXadPCE5BDaHhJAF84XL-T0_fBX_Ntb4eXfylbRGyHhCh8vjqTLj8yZ-oPqbviiyWL9u-6BHNllpi5qExI9oeUd7xkoDvDcui7muXXLZT_h-sj0wNzbWXaKcKXHCo_AhVc3vsdx0DHjenTj_lZ7DWmzJ_B4b7fUxa9R3SjV42UCuDDTgJEhEYSJaGeeC3LEK9USK2XjAd9NLcngA3inQ1gL5bDCUbdY5eMIcCswPHOKbLgWeiyJt7lJTxfcTVx3gBQ9Nsa-glK2D_lMLEUTopH1aDfFRjGSFxc3SilBszH245KP0KaggklnPHo15x82EHLYpB7NdClAvWZN8VeGRuT4" />
+    </item>
+    <item name="__RequestVerificationToken">
+      <value string="mT2gnbJTKhFuwVMKPIqjwBFniuJe_Z7RbDD4CQhvwAOYb6e5iaMXg9ROfbp3lCuORcgQX3LPMjerBpNsrY1To4YCw1SmWPRaIvT21fR5S8I1" />
+    </item>
+  </cookies>
+</error>

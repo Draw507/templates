@@ -1,0 +1,58 @@
+﻿@model IEnumerable<NIIF_9.Entidades.ViewModel.FormularioViewModel>
+
+<div class="row">
+    <div class="col-sm-12">
+        @using (Html.BeginForm("CambioContrasena", "Seguridad", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new
+        {
+            @id = "frmData",
+            //@class = "form-horizontal",
+            role = "form"
+        }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            foreach (var campo in Model.Where(w => w.Editable).OrderBy(o => o.Label))
+            {
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label class="bmd-label-floating" style="color:#002664 !important" data-toggle="tooltip" data-placement="right" title="Campo editable"><i class='fa fa-lg fa-pencil-square-o' aria-hidden='true'></i> @campo.Label</label>
+                        <input type="text" data-type="@campo.Type" name="@campo.Name" class="form-control form-editable" value="@campo.Value">
+                    </div>
+                </div>
+            }
+            foreach (var campo in Model.Where(w => !w.Editable).OrderBy(o => o.Label))
+            {
+                if (campo.Name == "registro_id")
+                {
+                    <input type="hidden" name="@campo.Name" data-type="int" value="@campo.Value"/>
+                }
+                else
+                {
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label class="bmd-label-floating">@campo.Label</label>
+                            <input type="text" name="@campo.Name" class="form-control" value="@campo.Value" disabled>
+                        </div>
+                    </div>
+                }
+            }
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label class="bmd-label-floating" style="color:#002664 !important" data-toggle="tooltip" data-placement="right" title="Campo requerido para actualización"><i class='fa fa-lg fa-pencil-square-o' aria-hidden='true'></i> Comentarios</label>
+                        <textarea data-type="string" class="form-control form-editable" id="comentarios" name="comentarios"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="pull-right">
+                        <a id="btnRegresar" class="btn btn-default">@$safeprojectname$.RecursosLocalizables.StringResources.BtnRegresar<div class="ripple-container"></div></a>
+                        <button id="btnActualizar" class="btn btn-danger" type="button">@$safeprojectname$.RecursosLocalizables.StringResources.BtnActualizar<div class="ripple-container"></div></button>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" id="type" value="@ViewBag.TipoFormulario" />
+        }
+    </div>
+</div>

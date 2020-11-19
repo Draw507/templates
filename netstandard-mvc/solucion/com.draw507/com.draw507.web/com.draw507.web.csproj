@@ -1,0 +1,1212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\Microsoft.Net.Compilers.2.8.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\..\packages\Microsoft.Net.Compilers.2.8.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AD9DD1B1-9FC5-401B-90DC-3CBB896D6EC3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>com.pim.capitalbank.web</RootNamespace>
+    <AssemblyName>Web</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>2.6</TypeScriptToolsVersion>
+    <SccProjectName>Web</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>https://people-inmotion.visualstudio.com/defaultcollection</SccAuxPath>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah, Version=1.2.14706.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.5.1.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EPPlus.4.5.1\lib\net40\EPPlus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.5.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.5.1\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.5.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.5.1\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.5.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.5.1\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.5.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.ApplicationInsights.Web.2.5.1\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.5.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.ApplicationInsights.WindowsServer.2.5.1\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.5.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.ApplicationInsights.2.5.1\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.Host.SystemWeb.4.0.0\lib\net451\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.4.0.0\lib\net451\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.Cookies.3.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.Facebook.4.0.0\lib\net451\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.Google.4.0.0\lib\net451\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.MicrosoftAccount.4.0.0\lib\net451\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.OAuth.4.0.0\lib\net451\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.Security.Twitter.4.0.0\lib\net451\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Diagnostics.DiagnosticSource.4.4.0\lib\net45\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SeguridadController.cs" />
+    <Compile Include="Filters\CustomHandleErrorAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ViewHelper.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Readme\Elmah.txt" />
+    <Content Include="Content\app.css" />
+    <Content Include="Content\lib\bootstrap\dist\css\bootstrap-grid.css" />
+    <Content Include="Content\lib\bootstrap\dist\css\bootstrap-grid.min.css" />
+    <Content Include="Content\lib\bootstrap\dist\css\bootstrap-reboot.css" />
+    <Content Include="Content\lib\bootstrap\dist\css\bootstrap-reboot.min.css" />
+    <Content Include="Content\lib\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="Content\lib\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="Content\lib\theme\assets\css\apps\contacts.css" />
+    <Content Include="Content\lib\theme\assets\css\apps\invoice.css" />
+    <Content Include="Content\lib\theme\assets\css\apps\mailbox.css" />
+    <Content Include="Content\lib\theme\assets\css\apps\mailing-chat.css" />
+    <Content Include="Content\lib\theme\assets\css\apps\notes.css" />
+    <Content Include="Content\lib\theme\assets\css\apps\scrumboard.css" />
+    <Content Include="Content\lib\theme\assets\css\apps\todolist.css" />
+    <Content Include="Content\lib\theme\assets\css\authentication\form-1.css" />
+    <Content Include="Content\lib\theme\assets\css\authentication\form-2.css" />
+    <Content Include="Content\lib\theme\assets\css\components\cards\card.css" />
+    <Content Include="Content\lib\theme\assets\css\components\custom-carousel.css" />
+    <Content Include="Content\lib\theme\assets\css\components\custom-countdown.css" />
+    <Content Include="Content\lib\theme\assets\css\components\custom-counter.css" />
+    <Content Include="Content\lib\theme\assets\css\components\custom-list-group.css" />
+    <Content Include="Content\lib\theme\assets\css\components\custom-media_object.css" />
+    <Content Include="Content\lib\theme\assets\css\components\custom-modal.css" />
+    <Content Include="Content\lib\theme\assets\css\components\custom-sweetalert.css" />
+    <Content Include="Content\lib\theme\assets\css\components\tabs-accordian\custom-accordions.css" />
+    <Content Include="Content\lib\theme\assets\css\components\tabs-accordian\custom-tabs.css" />
+    <Content Include="Content\lib\theme\assets\css\components\timeline\custom-timeline.css" />
+    <Content Include="Content\lib\theme\assets\css\dashboard\dash_1.css" />
+    <Content Include="Content\lib\theme\assets\css\dashboard\dash_2.css" />
+    <Content Include="Content\lib\theme\assets\css\elements\alert.css" />
+    <Content Include="Content\lib\theme\assets\css\elements\avatar.css" />
+    <Content Include="Content\lib\theme\assets\css\elements\breadcrumb.css" />
+    <Content Include="Content\lib\theme\assets\css\elements\color_library.css" />
+    <Content Include="Content\lib\theme\assets\css\elements\custom-pagination.css" />
+    <Content Include="Content\lib\theme\assets\css\elements\custom-tree_view.css" />
+    <Content Include="Content\lib\theme\assets\css\elements\custom-typography.css" />
+    <Content Include="Content\lib\theme\assets\css\elements\infobox.css" />
+    <Content Include="Content\lib\theme\assets\css\elements\miscellaneous.css" />
+    <Content Include="Content\lib\theme\assets\css\elements\popover.css" />
+    <Content Include="Content\lib\theme\assets\css\elements\search.css" />
+    <Content Include="Content\lib\theme\assets\css\elements\tooltip.css" />
+    <Content Include="Content\lib\theme\assets\css\forms\bootstrap-form.css" />
+    <Content Include="Content\lib\theme\assets\css\forms\custom-clipboard.css" />
+    <Content Include="Content\lib\theme\assets\css\forms\switches.css" />
+    <Content Include="Content\lib\theme\assets\css\forms\theme-checkbox-radio.css" />
+    <Content Include="Content\lib\theme\assets\css\loader.css" />
+    <Content Include="Content\lib\theme\assets\css\main.css" />
+    <Content Include="Content\lib\theme\assets\css\pages\coming-soon\style.css" />
+    <Content Include="Content\lib\theme\assets\css\pages\contact_us.css" />
+    <Content Include="Content\lib\theme\assets\css\pages\error\style-400.css" />
+    <Content Include="Content\lib\theme\assets\css\pages\error\style-500.css" />
+    <Content Include="Content\lib\theme\assets\css\pages\error\style-503.css" />
+    <Content Include="Content\lib\theme\assets\css\pages\error\style-maintanence.css" />
+    <Content Include="Content\lib\theme\assets\css\pages\faq\faq.css" />
+    <Content Include="Content\lib\theme\assets\css\pages\faq\faq2.css" />
+    <Content Include="Content\lib\theme\assets\css\pages\helpdesk.css" />
+    <Content Include="Content\lib\theme\assets\css\pages\privacy\privacy.css" />
+    <Content Include="Content\lib\theme\assets\css\plugins.css" />
+    <Content Include="Content\lib\theme\assets\css\scrollspyNav.css" />
+    <Content Include="Content\lib\theme\assets\css\structure.css" />
+    <Content Include="Content\lib\theme\assets\css\tables\table-basic.css" />
+    <Content Include="Content\lib\theme\assets\css\users\account-setting.css" />
+    <Content Include="Content\lib\theme\assets\css\users\user-profile.css" />
+    <Content Include="Content\lib\theme\assets\css\widgets\modules-widgets.css" />
+    <Content Include="Content\lib\theme\plugins\animate\animate.min.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\highlight.pack.js" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\a11y-dark.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\a11y-light.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\agate.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\an-old-hope.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\androidstudio.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\arduino-light.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\arta.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\ascetic.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\atelier-cave-dark.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\atelier-cave-light.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\atelier-dune-dark.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\atelier-dune-light.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\atelier-estuary-dark.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\atelier-estuary-light.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\atelier-forest-dark.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\atelier-forest-light.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\atelier-heath-dark.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\atelier-heath-light.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\atelier-lakeside-dark.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\atelier-lakeside-light.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\atelier-plateau-dark.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\atelier-plateau-light.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\atelier-savanna-dark.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\atelier-savanna-light.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\atelier-seaside-dark.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\atelier-seaside-light.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\atelier-sulphurpool-dark.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\atelier-sulphurpool-light.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\atom-one-dark-reasonable.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\atom-one-dark.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\atom-one-light.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\brown-paper.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\brown-papersq.png" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\codepen-embed.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\color-brewer.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\darcula.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\dark.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\darkula.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\default.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\docco.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\dracula.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\far.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\foundation.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\github-gist.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\github.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\gml.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\googlecode.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\grayscale.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\gruvbox-dark.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\gruvbox-light.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\hopscotch.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\hybrid.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\idea.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\ir-black.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\isbl-editor-dark.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\isbl-editor-light.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\kimbie.dark.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\kimbie.light.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\lightfair.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\magula.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\mono-blue.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\monokai-sublime.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\monokai.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\nord.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\obsidian.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\ocean.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\paraiso-dark.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\paraiso-light.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\pojoaque.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\pojoaque.jpg" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\purebasic.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\qtcreator_dark.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\qtcreator_light.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\railscasts.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\rainbow.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\routeros.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\school-book.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\school-book.png" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\shades-of-purple.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\solarized-dark.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\solarized-light.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\sunburst.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\tomorrow-night-blue.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\tomorrow-night-bright.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\tomorrow-night-eighties.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\tomorrow-night.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\tomorrow.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\vs.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\vs2015.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\xcode.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\xt256.css" />
+    <Content Include="Content\lib\theme\plugins\highlight\styles\zenburn.css" />
+    <Content Include="Content\lib\theme\plugins\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="Content\lib\theme\plugins\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="Content\lib\theme\plugins\sweetalerts\sweetalert.css" />
+    <Content Include="Content\lib\theme\plugins\sweetalerts\sweetalert2.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\MaterialIcons-Regular.svg" />
+    <Content Include="fonts\roboto-condensed-v16-latin-300.svg" />
+    <Content Include="fonts\roboto-condensed-v16-latin-700.svg" />
+    <Content Include="fonts\roboto-condensed-v16-latin-regular.svg" />
+    <Content Include="fonts\roboto-v18-latin-300.svg" />
+    <Content Include="fonts\roboto-v18-latin-700.svg" />
+    <Content Include="fonts\roboto-v18-latin-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\MaterialIcons-Regular.eot" />
+    <Content Include="fonts\MaterialIcons-Regular.ijmap" />
+    <Content Include="fonts\MaterialIcons-Regular.ttf" />
+    <Content Include="fonts\MaterialIcons-Regular.woff" />
+    <Content Include="fonts\MaterialIcons-Regular.woff2" />
+    <Content Include="fonts\roboto-condensed-v16-latin-300.eot" />
+    <Content Include="fonts\roboto-condensed-v16-latin-300.ttf" />
+    <Content Include="fonts\roboto-condensed-v16-latin-300.woff" />
+    <Content Include="fonts\roboto-condensed-v16-latin-300.woff2" />
+    <Content Include="fonts\roboto-condensed-v16-latin-700.eot" />
+    <Content Include="fonts\roboto-condensed-v16-latin-700.ttf" />
+    <Content Include="fonts\roboto-condensed-v16-latin-700.woff" />
+    <Content Include="fonts\roboto-condensed-v16-latin-700.woff2" />
+    <Content Include="fonts\roboto-condensed-v16-latin-regular.eot" />
+    <Content Include="fonts\roboto-condensed-v16-latin-regular.ttf" />
+    <Content Include="fonts\roboto-condensed-v16-latin-regular.woff" />
+    <Content Include="fonts\roboto-condensed-v16-latin-regular.woff2" />
+    <Content Include="fonts\roboto-v18-latin-300.eot" />
+    <Content Include="fonts\roboto-v18-latin-300.ttf" />
+    <Content Include="fonts\roboto-v18-latin-300.woff" />
+    <Content Include="fonts\roboto-v18-latin-300.woff2" />
+    <Content Include="fonts\roboto-v18-latin-700.eot" />
+    <Content Include="fonts\roboto-v18-latin-700.ttf" />
+    <Content Include="fonts\roboto-v18-latin-700.woff" />
+    <Content Include="fonts\roboto-v18-latin-700.woff2" />
+    <Content Include="fonts\roboto-v18-latin-regular.eot" />
+    <Content Include="fonts\roboto-v18-latin-regular.ttf" />
+    <Content Include="fonts\roboto-v18-latin-regular.woff" />
+    <Content Include="fonts\roboto-v18-latin-regular.woff2" />
+    <Content Include="Content\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <Content Include="Content\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="Content\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <Content Include="Content\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="Content\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="Content\lib\bootstrap\LICENSE" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="Images\lib\120x120.jpg" />
+    <Content Include="Images\lib\1280x857.jpg" />
+    <Content Include="Images\lib\175x115.jpg" />
+    <Content Include="Images\lib\200x200.jpg" />
+    <Content Include="Images\lib\300x300.jpg" />
+    <Content Include="Images\lib\350x250.jpg" />
+    <Content Include="Images\lib\400x168.jpg" />
+    <Content Include="Images\lib\400x300.jpg" />
+    <Content Include="Images\lib\509x343.jpg" />
+    <Content Include="Images\lib\600x300.jpg" />
+    <Content Include="Images\lib\640x426.jpg" />
+    <Content Include="Images\lib\90x90.jpg" />
+    <Content Include="Images\lib\ab-1.jpeg" />
+    <Content Include="Images\lib\arrow-down.png" />
+    <Content Include="Images\lib\bg.png" />
+    <Content Include="Images\lib\ca.png" />
+    <Content Include="Images\lib\contact-us-map-pin.svg" />
+    <Content Include="Images\lib\de.png" />
+    <Content Include="Images\lib\faq.svg" />
+    <Content Include="Images\lib\favicon.ico" />
+    <Content Include="Images\lib\fr.png" />
+    <Content Include="Images\lib\jp.png" />
+    <Content Include="Images\lib\mindset.svg" />
+    <Content Include="Scripts\app.js" />
+    <Content Include="Scripts\lib\bootstrap\dist\css\bootstrap-grid.css" />
+    <Content Include="Scripts\lib\bootstrap\dist\css\bootstrap-grid.min.css" />
+    <Content Include="Scripts\lib\bootstrap\dist\css\bootstrap-reboot.css" />
+    <Content Include="Scripts\lib\bootstrap\dist\css\bootstrap-reboot.min.css" />
+    <Content Include="Scripts\lib\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="Scripts\lib\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="Scripts\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+    <Content Include="Scripts\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\lib\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="Scripts\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="Scripts\lib\bootstrap\dist\js\popper.min.js" />
+    <Content Include="Scripts\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\lib\jquery-validation-unobtrusive\LICENSE.txt" />
+    <Content Include="Scripts\lib\jquery-validation\dist\additional-methods.js" />
+    <Content Include="Scripts\lib\jquery-validation\dist\additional-methods.min.js" />
+    <Content Include="Scripts\lib\jquery-validation\dist\jquery.validate.js" />
+    <Content Include="Scripts\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <Content Include="Scripts\lib\jquery\dist\jquery.js" />
+    <Content Include="Scripts\lib\jquery\dist\jquery.min.js" />
+    <Content Include="Scripts\lib\jquery\LICENSE.txt" />
+    <Content Include="Scripts\lib\theme\assets\css\apps\contacts.css" />
+    <Content Include="Scripts\lib\theme\assets\css\apps\invoice.css" />
+    <Content Include="Scripts\lib\theme\assets\css\apps\mailbox.css" />
+    <Content Include="Scripts\lib\theme\assets\css\apps\mailing-chat.css" />
+    <Content Include="Scripts\lib\theme\assets\css\apps\notes.css" />
+    <Content Include="Scripts\lib\theme\assets\css\apps\scrumboard.css" />
+    <Content Include="Scripts\lib\theme\assets\css\apps\todolist.css" />
+    <Content Include="Scripts\lib\theme\assets\css\authentication\form-1.css" />
+    <Content Include="Scripts\lib\theme\assets\css\authentication\form-2.css" />
+    <Content Include="Scripts\lib\theme\assets\css\components\cards\card.css" />
+    <Content Include="Scripts\lib\theme\assets\css\components\custom-carousel.css" />
+    <Content Include="Scripts\lib\theme\assets\css\components\custom-countdown.css" />
+    <Content Include="Scripts\lib\theme\assets\css\components\custom-counter.css" />
+    <Content Include="Scripts\lib\theme\assets\css\components\custom-list-group.css" />
+    <Content Include="Scripts\lib\theme\assets\css\components\custom-media_object.css" />
+    <Content Include="Scripts\lib\theme\assets\css\components\custom-modal.css" />
+    <Content Include="Scripts\lib\theme\assets\css\components\custom-sweetalert.css" />
+    <Content Include="Scripts\lib\theme\assets\css\components\tabs-accordian\custom-accordions.css" />
+    <Content Include="Scripts\lib\theme\assets\css\components\tabs-accordian\custom-tabs.css" />
+    <Content Include="Scripts\lib\theme\assets\css\components\timeline\custom-timeline.css" />
+    <Content Include="Scripts\lib\theme\assets\css\dashboard\dash_1.css" />
+    <Content Include="Scripts\lib\theme\assets\css\dashboard\dash_2.css" />
+    <Content Include="Scripts\lib\theme\assets\css\elements\alert.css" />
+    <Content Include="Scripts\lib\theme\assets\css\elements\avatar.css" />
+    <Content Include="Scripts\lib\theme\assets\css\elements\breadcrumb.css" />
+    <Content Include="Scripts\lib\theme\assets\css\elements\color_library.css" />
+    <Content Include="Scripts\lib\theme\assets\css\elements\custom-pagination.css" />
+    <Content Include="Scripts\lib\theme\assets\css\elements\custom-tree_view.css" />
+    <Content Include="Scripts\lib\theme\assets\css\elements\custom-typography.css" />
+    <Content Include="Scripts\lib\theme\assets\css\elements\infobox.css" />
+    <Content Include="Scripts\lib\theme\assets\css\elements\miscellaneous.css" />
+    <Content Include="Scripts\lib\theme\assets\css\elements\popover.css" />
+    <Content Include="Scripts\lib\theme\assets\css\elements\search.css" />
+    <Content Include="Scripts\lib\theme\assets\css\elements\tooltip.css" />
+    <Content Include="Scripts\lib\theme\assets\css\forms\bootstrap-form.css" />
+    <Content Include="Scripts\lib\theme\assets\css\forms\custom-clipboard.css" />
+    <Content Include="Scripts\lib\theme\assets\css\forms\switches.css" />
+    <Content Include="Scripts\lib\theme\assets\css\forms\theme-checkbox-radio.css" />
+    <Content Include="Scripts\lib\theme\assets\css\loader.css" />
+    <Content Include="Scripts\lib\theme\assets\css\main.css" />
+    <Content Include="Scripts\lib\theme\assets\css\pages\coming-soon\style.css" />
+    <Content Include="Scripts\lib\theme\assets\css\pages\contact_us.css" />
+    <Content Include="Scripts\lib\theme\assets\css\pages\error\style-400.css" />
+    <Content Include="Scripts\lib\theme\assets\css\pages\error\style-500.css" />
+    <Content Include="Scripts\lib\theme\assets\css\pages\error\style-503.css" />
+    <Content Include="Scripts\lib\theme\assets\css\pages\error\style-maintanence.css" />
+    <Content Include="Scripts\lib\theme\assets\css\pages\faq\faq.css" />
+    <Content Include="Scripts\lib\theme\assets\css\pages\faq\faq2.css" />
+    <Content Include="Scripts\lib\theme\assets\css\pages\helpdesk.css" />
+    <Content Include="Scripts\lib\theme\assets\css\pages\privacy\privacy.css" />
+    <Content Include="Scripts\lib\theme\assets\css\plugins.css" />
+    <Content Include="Scripts\lib\theme\assets\css\scrollspyNav.css" />
+    <Content Include="Scripts\lib\theme\assets\css\structure.css" />
+    <Content Include="Scripts\lib\theme\assets\css\tables\table-basic.css" />
+    <Content Include="Scripts\lib\theme\assets\css\users\account-setting.css" />
+    <Content Include="Scripts\lib\theme\assets\css\users\user-profile.css" />
+    <Content Include="Scripts\lib\theme\assets\css\widgets\modules-widgets.css" />
+    <Content Include="Scripts\lib\theme\assets\img\120x120.jpg" />
+    <Content Include="Scripts\lib\theme\assets\img\1280x857.jpg" />
+    <Content Include="Scripts\lib\theme\assets\img\175x115.jpg" />
+    <Content Include="Scripts\lib\theme\assets\img\200x200.jpg" />
+    <Content Include="Scripts\lib\theme\assets\img\300x300.jpg" />
+    <Content Include="Scripts\lib\theme\assets\img\350x250.jpg" />
+    <Content Include="Scripts\lib\theme\assets\img\400x168.jpg" />
+    <Content Include="Scripts\lib\theme\assets\img\400x300.jpg" />
+    <Content Include="Scripts\lib\theme\assets\img\509x343.jpg" />
+    <Content Include="Scripts\lib\theme\assets\img\600x300.jpg" />
+    <Content Include="Scripts\lib\theme\assets\img\640x426.jpg" />
+    <Content Include="Scripts\lib\theme\assets\img\90x90.jpg" />
+    <Content Include="Scripts\lib\theme\assets\img\ab-1.jpeg" />
+    <Content Include="Scripts\lib\theme\assets\img\arrow-down.png" />
+    <Content Include="Scripts\lib\theme\assets\img\bg.png" />
+    <Content Include="Scripts\lib\theme\assets\img\ca.png" />
+    <Content Include="Scripts\lib\theme\assets\img\contact-us-map-pin.svg" />
+    <Content Include="Scripts\lib\theme\assets\img\de.png" />
+    <Content Include="Scripts\lib\theme\assets\img\faq.svg" />
+    <Content Include="Scripts\lib\theme\assets\img\favicon.ico" />
+    <Content Include="Scripts\lib\theme\assets\img\fr.png" />
+    <Content Include="Scripts\lib\theme\assets\img\jp.png" />
+    <Content Include="Scripts\lib\theme\assets\img\mindset.svg" />
+    <Content Include="Scripts\lib\theme\assets\js\app.js" />
+    <Content Include="Scripts\lib\theme\assets\js\apps\contact.js" />
+    <Content Include="Scripts\lib\theme\assets\js\apps\custom-mailbox.js" />
+    <Content Include="Scripts\lib\theme\assets\js\apps\invoice.js" />
+    <Content Include="Scripts\lib\theme\assets\js\apps\mailbox-chat.js" />
+    <Content Include="Scripts\lib\theme\assets\js\apps\notes.js" />
+    <Content Include="Scripts\lib\theme\assets\js\apps\scrumboard.js" />
+    <Content Include="Scripts\lib\theme\assets\js\apps\todoList.js" />
+    <Content Include="Scripts\lib\theme\assets\js\authentication\form-1.js" />
+    <Content Include="Scripts\lib\theme\assets\js\authentication\form-2.js" />
+    <Content Include="Scripts\lib\theme\assets\js\clipboard\clipboard.min.js" />
+    <Content Include="Scripts\lib\theme\assets\js\components\custom-carousel.js" />
+    <Content Include="Scripts\lib\theme\assets\js\components\custom-countdown.js" />
+    <Content Include="Scripts\lib\theme\assets\js\components\custom-counter.js" />
+    <Content Include="Scripts\lib\theme\assets\js\components\notification\custom-snackbar.js" />
+    <Content Include="Scripts\lib\theme\assets\js\components\session-timeout\bootstrap-session-timeout.js" />
+    <Content Include="Scripts\lib\theme\assets\js\components\session-timeout\custom-bootstrap_session_timeout.js" />
+    <Content Include="Scripts\lib\theme\assets\js\components\ui-accordions.js" />
+    <Content Include="Scripts\lib\theme\assets\js\custom.js" />
+    <Content Include="Scripts\lib\theme\assets\js\dashboard\dash_1.js" />
+    <Content Include="Scripts\lib\theme\assets\js\dashboard\dash_2.js" />
+    <Content Include="Scripts\lib\theme\assets\js\elements\custom-search.js" />
+    <Content Include="Scripts\lib\theme\assets\js\elements\popovers.js" />
+    <Content Include="Scripts\lib\theme\assets\js\elements\tooltip.js" />
+    <Content Include="Scripts\lib\theme\assets\js\forms\bootstrap_validation\bs_validation_script.js" />
+    <Content Include="Scripts\lib\theme\assets\js\forms\custom-clipboard.js" />
+    <Content Include="Scripts\lib\theme\assets\js\ie11fix\fn.fix-padStart.js" />
+    <Content Include="Scripts\lib\theme\assets\js\libs\jquery-3.1.1.min.js" />
+    <Content Include="Scripts\lib\theme\assets\js\libs\jquery-ui.js" />
+    <Content Include="Scripts\lib\theme\assets\js\loader.js" />
+    <Content Include="Scripts\lib\theme\assets\js\pages\coming-soon\coming-soon.js" />
+    <Content Include="Scripts\lib\theme\assets\js\pages\faq\faq.js" />
+    <Content Include="Scripts\lib\theme\assets\js\pages\faq\faq2.js" />
+    <Content Include="Scripts\lib\theme\assets\js\pages\helpdesk.js" />
+    <Content Include="Scripts\lib\theme\assets\js\scrollspyNav.js" />
+    <Content Include="Scripts\lib\theme\assets\js\users\account-settings.js" />
+    <Content Include="Scripts\lib\theme\assets\js\widgets\modules-widgets.js" />
+    <Content Include="Scripts\lib\theme\plugins\animate\animate.min.css" />
+    <Content Include="Scripts\lib\theme\plugins\apex\apexcharts.css" />
+    <Content Include="Scripts\lib\theme\plugins\apex\apexcharts.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\apex\custom-apexcharts.js" />
+    <Content Include="Scripts\lib\theme\plugins\autocomplete\autocomplete.css" />
+    <Content Include="Scripts\lib\theme\plugins\autocomplete\countries.js" />
+    <Content Include="Scripts\lib\theme\plugins\autocomplete\demo.js" />
+    <Content Include="Scripts\lib\theme\plugins\autocomplete\jquery.autocomplete.js" />
+    <Content Include="Scripts\lib\theme\plugins\autocomplete\jquery.mockjax.js" />
+    <Content Include="Scripts\lib\theme\plugins\blockui\custom-blockui.js" />
+    <Content Include="Scripts\lib\theme\plugins\blockui\jquery.blockUI.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\bootstrap-maxlength\bootstrap-maxlength.js" />
+    <Content Include="Scripts\lib\theme\plugins\bootstrap-maxlength\custom-bs-maxlength.js" />
+    <Content Include="Scripts\lib\theme\plugins\bootstrap-multiselect\bootstrap-multiselect.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\bootstrap-range-Slider\bootstrap-rangeSlider.js" />
+    <Content Include="Scripts\lib\theme\plugins\bootstrap-range-Slider\bootstrap-slider.css" />
+    <Content Include="Scripts\lib\theme\plugins\bootstrap-select\bootstrap-select.min.css" />
+    <Content Include="Scripts\lib\theme\plugins\bootstrap-select\bootstrap-select.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\bootstrap-touchspin\custom-bootstrap-touchspin.js" />
+    <Content Include="Scripts\lib\theme\plugins\bootstrap-touchspin\jquery.bootstrap-touchspin.min.css" />
+    <Content Include="Scripts\lib\theme\plugins\bootstrap-touchspin\jquery.bootstrap-touchspin.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\countdown\jquery.countdown.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\counter\jquery.countTo.js" />
+    <Content Include="Scripts\lib\theme\plugins\drag-and-drop\dragula\crossvent.js" />
+    <Content Include="Scripts\lib\theme\plugins\drag-and-drop\dragula\crossvent.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\drag-and-drop\dragula\custom-dragula.js" />
+    <Content Include="Scripts\lib\theme\plugins\drag-and-drop\dragula\dragula.css" />
+    <Content Include="Scripts\lib\theme\plugins\drag-and-drop\dragula\dragula.js" />
+    <Content Include="Scripts\lib\theme\plugins\drag-and-drop\dragula\dragula.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\drag-and-drop\dragula\example.css" />
+    <Content Include="Scripts\lib\theme\plugins\dropify\dropify.min.css" />
+    <Content Include="Scripts\lib\theme\plugins\dropify\dropify.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\dropify\fonts\dropify.svg" />
+    <Content Include="Scripts\lib\theme\plugins\editors\markdown\custom-markdown.js" />
+    <Content Include="Scripts\lib\theme\plugins\editors\markdown\simplemde.min.css" />
+    <Content Include="Scripts\lib\theme\plugins\editors\markdown\simplemde.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\editors\quill\custom-quill.js" />
+    <Content Include="Scripts\lib\theme\plugins\editors\quill\quill.bubble.css" />
+    <Content Include="Scripts\lib\theme\plugins\editors\quill\quill.js" />
+    <Content Include="Scripts\lib\theme\plugins\editors\quill\quill.snow.css" />
+    <Content Include="Scripts\lib\theme\plugins\file-upload\file-upload-with-preview.min.css" />
+    <Content Include="Scripts\lib\theme\plugins\file-upload\file-upload-with-preview.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\flatpickr\custom-flatpickr.css" />
+    <Content Include="Scripts\lib\theme\plugins\flatpickr\custom-flatpickr.js" />
+    <Content Include="Scripts\lib\theme\plugins\flatpickr\flatpickr.css" />
+    <Content Include="Scripts\lib\theme\plugins\flatpickr\flatpickr.js" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\activity.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\airplay.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\alert-circle.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\alert-octagon.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\alert-triangle.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\align-center.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\align-justify.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\align-left.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\align-right.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\anchor.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\aperture.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\archive.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\arrow-down-circle.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\arrow-down-left.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\arrow-down-right.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\arrow-down.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\arrow-left-circle.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\arrow-left.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\arrow-right-circle.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\arrow-right.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\arrow-up-circle.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\arrow-up-left.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\arrow-up-right.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\arrow-up.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\at-sign.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\award.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\bar-chart-2.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\bar-chart.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\battery-charging.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\battery.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\bell-off.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\bell.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\bluetooth.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\bold.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\book-open.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\book.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\bookmark.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\box.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\briefcase.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\calendar.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\camera-off.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\camera.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\cast.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\check-circle.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\check-square.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\check.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\chevron-down.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\chevron-left.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\chevron-right.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\chevron-up.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\chevrons-down.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\chevrons-left.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\chevrons-right.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\chevrons-up.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\chrome.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\circle.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\clipboard.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\clock.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\cloud-drizzle.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\cloud-lightning.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\cloud-off.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\cloud-rain.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\cloud-snow.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\cloud.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\code.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\codepen.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\codesandbox.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\coffee.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\columns.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\command.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\compass.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\copy.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\corner-down-left.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\corner-down-right.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\corner-left-down.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\corner-left-up.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\corner-right-down.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\corner-right-up.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\corner-up-left.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\corner-up-right.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\cpu.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\credit-card.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\crop.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\crosshair.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\database.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\delete.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\disc.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\dollar-sign.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\download-cloud.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\download.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\droplet.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\edit-2.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\edit-3.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\edit.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\external-link.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\eye-off.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\eye.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\facebook.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\fast-forward.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\feather.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\feather.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\figma.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\file-minus.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\file-plus.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\file-text.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\file.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\film.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\filter.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\flag.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\folder-minus.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\folder-plus.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\folder.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\framer.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\frown.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\gift.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\git-branch.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\git-commit.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\git-merge.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\git-pull-request.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\github.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\gitlab.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\globe.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\grid.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\hard-drive.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\hash.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\headphones.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\heart.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\help-circle.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\hexagon.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\home.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\image.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\inbox.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\info.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\instagram.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\italic.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\key.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\layers.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\layout.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\life-buoy.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\link-2.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\link.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\linkedin.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\list.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\loader.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\lock.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\log-in.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\log-out.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\mail.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\map-pin.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\map.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\maximize-2.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\maximize.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\meh.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\menu.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\message-circle.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\message-square.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\mic-off.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\mic.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\minimize-2.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\minimize.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\minus-circle.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\minus-square.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\minus.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\monitor.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\moon.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\more-horizontal.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\more-vertical.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\mouse-pointer.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\move.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\music.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\navigation-2.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\navigation.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\octagon.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\package.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\paperclip.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\pause-circle.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\pause.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\pen-tool.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\percent.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\phone-call.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\phone-forwarded.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\phone-incoming.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\phone-missed.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\phone-off.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\phone-outgoing.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\phone.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\pie-chart.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\play-circle.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\play.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\plus-circle.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\plus-square.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\plus.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\pocket.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\power.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\printer.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\radio.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\refresh-ccw.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\refresh-cw.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\repeat.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\rewind.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\rotate-ccw.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\rotate-cw.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\rss.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\save.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\scissors.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\search.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\send.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\server.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\settings.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\share-2.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\share.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\shield-off.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\shield.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\shopping-bag.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\shopping-cart.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\shuffle.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\sidebar.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\skip-back.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\skip-forward.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\slack.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\slash.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\sliders.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\smartphone.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\smile.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\speaker.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\square.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\star.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\stop-circle.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\sun.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\sunrise.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\sunset.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\tablet.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\tag.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\target.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\terminal.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\thermometer.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\thumbs-down.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\thumbs-up.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\toggle-left.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\toggle-right.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\tool.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\trash-2.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\trash.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\trello.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\trending-down.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\trending-up.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\triangle.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\truck.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\tv.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\twitch.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\twitter.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\type.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\umbrella.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\underline.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\unlock.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\upload-cloud.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\upload.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\user-check.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\user-minus.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\user-plus.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\user-x.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\user.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\users.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\video-off.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\video.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\voicemail.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\volume-1.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\volume-2.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\volume-x.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\volume.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\watch.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\wifi-off.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\wifi.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\wind.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\x-circle.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\x-octagon.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\x-square.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\x.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\youtube.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\zap-off.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\zap.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\zoom-in.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\feather\zoom-out.svg" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\fontawesome\css\fontawesome.css" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\fontawesome\css\regular.css" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\fontawesome\webfonts\fa-regular-400.svg" />
+    <Content Include="Scripts\lib\theme\plugins\fullcalendar\custom-fullcalendar.advance.css" />
+    <Content Include="Scripts\lib\theme\plugins\fullcalendar\custom-fullcalendar.advance.js" />
+    <Content Include="Scripts\lib\theme\plugins\fullcalendar\fullcalendar.css" />
+    <Content Include="Scripts\lib\theme\plugins\fullcalendar\fullcalendar.min.css" />
+    <Content Include="Scripts\lib\theme\plugins\fullcalendar\fullcalendar.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\fullcalendar\moment.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\highlight.pack.js" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\a11y-dark.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\a11y-light.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\agate.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\an-old-hope.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\androidstudio.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\arduino-light.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\arta.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\ascetic.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\atelier-cave-dark.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\atelier-cave-light.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\atelier-dune-dark.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\atelier-dune-light.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\atelier-estuary-dark.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\atelier-estuary-light.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\atelier-forest-dark.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\atelier-forest-light.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\atelier-heath-dark.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\atelier-heath-light.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\atelier-lakeside-dark.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\atelier-lakeside-light.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\atelier-plateau-dark.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\atelier-plateau-light.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\atelier-savanna-dark.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\atelier-savanna-light.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\atelier-seaside-dark.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\atelier-seaside-light.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\atelier-sulphurpool-dark.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\atelier-sulphurpool-light.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\atom-one-dark-reasonable.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\atom-one-dark.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\atom-one-light.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\brown-paper.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\brown-papersq.png" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\codepen-embed.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\color-brewer.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\darcula.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\dark.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\darkula.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\default.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\docco.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\dracula.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\far.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\foundation.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\github-gist.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\github.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\gml.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\googlecode.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\grayscale.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\gruvbox-dark.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\gruvbox-light.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\hopscotch.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\hybrid.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\idea.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\ir-black.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\isbl-editor-dark.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\isbl-editor-light.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\kimbie.dark.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\kimbie.light.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\lightfair.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\magula.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\mono-blue.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\monokai-sublime.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\monokai.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\nord.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\obsidian.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\ocean.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\paraiso-dark.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\paraiso-light.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\pojoaque.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\pojoaque.jpg" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\purebasic.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\qtcreator_dark.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\qtcreator_light.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\railscasts.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\rainbow.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\routeros.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\school-book.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\school-book.png" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\shades-of-purple.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\solarized-dark.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\solarized-light.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\sunburst.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\tomorrow-night-blue.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\tomorrow-night-bright.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\tomorrow-night-eighties.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\tomorrow-night.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\tomorrow.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\vs.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\vs2015.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\xcode.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\xt256.css" />
+    <Content Include="Scripts\lib\theme\plugins\highlight\styles\zenburn.css" />
+    <Content Include="Scripts\lib\theme\plugins\input-mask\input-mask.js" />
+    <Content Include="Scripts\lib\theme\plugins\input-mask\jquery.inputmask.bundle.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\input-mask\phone-codes\phone-be.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\input-mask\phone-codes\phone-ca.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\input-mask\phone-codes\phone-hu.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\input-mask\phone-codes\phone-it.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\input-mask\phone-codes\phone-mx.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\input-mask\phone-codes\phone-nl.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\input-mask\phone-codes\phone-ru.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\input-mask\phone-codes\phone.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\jquery-step\custom-jquery.steps.js" />
+    <Content Include="Scripts\lib\theme\plugins\jquery-step\jquery.steps.css" />
+    <Content Include="Scripts\lib\theme\plugins\jquery-step\jquery.steps.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\jquery-ui\images\ui-icons_444444_256x240.png" />
+    <Content Include="Scripts\lib\theme\plugins\jquery-ui\images\ui-icons_555555_256x240.png" />
+    <Content Include="Scripts\lib\theme\plugins\jquery-ui\images\ui-icons_777620_256x240.png" />
+    <Content Include="Scripts\lib\theme\plugins\jquery-ui\images\ui-icons_777777_256x240.png" />
+    <Content Include="Scripts\lib\theme\plugins\jquery-ui\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Scripts\lib\theme\plugins\jquery-ui\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="Scripts\lib\theme\plugins\jquery-ui\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\lib\theme\plugins\jquery-ui\jquery-ui.min.css" />
+    <Content Include="Scripts\lib\theme\plugins\jquery-ui\jquery-ui.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\jvector\africa\jquery-jvectormap-africa-en.js" />
+    <Content Include="Scripts\lib\theme\plugins\jvector\asia\jquery-jvectormap-asia-en.js" />
+    <Content Include="Scripts\lib\theme\plugins\jvector\continents\jquery-jvectormap-continents-en.js" />
+    <Content Include="Scripts\lib\theme\plugins\jvector\europe\jquery-jvectormap-europe-en.js" />
+    <Content Include="Scripts\lib\theme\plugins\jvector\jquery-jvectormap-2.0.3.css" />
+    <Content Include="Scripts\lib\theme\plugins\jvector\jquery-jvectormap-2.0.3.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\jvector\jvector_script.js" />
+    <Content Include="Scripts\lib\theme\plugins\jvector\north_america\jquery-jvectormap-north-america-en.js" />
+    <Content Include="Scripts\lib\theme\plugins\jvector\oceania\jquery-jvectormap-oceanina-en.js" />
+    <Content Include="Scripts\lib\theme\plugins\jvector\south-america\jquery-jvectormap-south-america-en.js" />
+    <Content Include="Scripts\lib\theme\plugins\jvector\worldmap_script\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Scripts\lib\theme\plugins\lightbox\custom-photswipe.css" />
+    <Content Include="Scripts\lib\theme\plugins\lightbox\custom-photswipe.js" />
+    <Content Include="Scripts\lib\theme\plugins\lightbox\default-skin\default-skin.css" />
+    <Content Include="Scripts\lib\theme\plugins\lightbox\default-skin\default-skin.png" />
+    <Content Include="Scripts\lib\theme\plugins\lightbox\default-skin\default-skin.svg" />
+    <Content Include="Scripts\lib\theme\plugins\lightbox\default-skin\preloader.gif" />
+    <Content Include="Scripts\lib\theme\plugins\lightbox\photoswipe-ui-default.js" />
+    <Content Include="Scripts\lib\theme\plugins\lightbox\photoswipe-ui-default.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\lightbox\photoswipe.css" />
+    <Content Include="Scripts\lib\theme\plugins\lightbox\photoswipe.js" />
+    <Content Include="Scripts\lib\theme\plugins\lightbox\photoswipe.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\loaders\custom-loader.css" />
+    <Content Include="Scripts\lib\theme\plugins\notification\snackbar\snackbar.min.css" />
+    <Content Include="Scripts\lib\theme\plugins\notification\snackbar\snackbar.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\noUiSlider\custom-nouiSlider.css" />
+    <Content Include="Scripts\lib\theme\plugins\noUiSlider\custom-nouiSlider.js" />
+    <Content Include="Scripts\lib\theme\plugins\noUiSlider\nouislider.min.css" />
+    <Content Include="Scripts\lib\theme\plugins\noUiSlider\nouislider.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="Scripts\lib\theme\plugins\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\pricing-table\css\component.css" />
+    <Content Include="Scripts\lib\theme\plugins\select2\custom-select2.js" />
+    <Content Include="Scripts\lib\theme\plugins\select2\select2-spinner.gif" />
+    <Content Include="Scripts\lib\theme\plugins\select2\select2.min.css" />
+    <Content Include="Scripts\lib\theme\plugins\select2\select2.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\select2\select2.png" />
+    <Content Include="Scripts\lib\theme\plugins\select2\select2x2.png" />
+    <Content Include="Scripts\lib\theme\plugins\sweetalerts\custom-sweetalert.js" />
+    <Content Include="Scripts\lib\theme\plugins\sweetalerts\promise-polyfill.js" />
+    <Content Include="Scripts\lib\theme\plugins\sweetalerts\sweetalert.css" />
+    <Content Include="Scripts\lib\theme\plugins\sweetalerts\sweetalert.js" />
+    <Content Include="Scripts\lib\theme\plugins\sweetalerts\sweetalert2.min.css" />
+    <Content Include="Scripts\lib\theme\plugins\sweetalerts\sweetalert2.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\table\datatable\button-ext\buttons.html5.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\table\datatable\button-ext\buttons.print.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\table\datatable\button-ext\dataTables.buttons.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\table\datatable\button-ext\jszip.min.js" />
+    <Content Include="Scripts\lib\theme\plugins\table\datatable\custom_dt_custom.css" />
+    <Content Include="Scripts\lib\theme\plugins\table\datatable\custom_dt_html5.css" />
+    <Content Include="Scripts\lib\theme\plugins\table\datatable\custom_dt_miscellaneous.css" />
+    <Content Include="Scripts\lib\theme\plugins\table\datatable\custom_dt_multiple_tables.css" />
+    <Content Include="Scripts\lib\theme\plugins\table\datatable\custom_miscellaneous.js" />
+    <Content Include="Scripts\lib\theme\plugins\table\datatable\datatables-dark.css" />
+    <Content Include="Scripts\lib\theme\plugins\table\datatable\datatables.css" />
+    <Content Include="Scripts\lib\theme\plugins\table\datatable\datatables.js" />
+    <Content Include="Scripts\lib\theme\plugins\table\datatable\dt-custom-setting.js" />
+    <Content Include="Scripts\lib\theme\plugins\table\datatable\dt-global_style-dark.css" />
+    <Content Include="Scripts\lib\theme\plugins\table\datatable\dt-global_style.css" />
+    <Content Include="Scripts\lib\theme\plugins\tagInput\tags-input.css" />
+    <Content Include="Scripts\lib\theme\plugins\tagInput\tags-input.js" />
+    <Content Include="Scripts\lib\theme\plugins\treeview\custom-jstree.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Scripts\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <Content Include="Scripts\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="Scripts\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <Content Include="Scripts\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Scripts\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="Scripts\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="Scripts\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\lib\bootstrap\dist\js\bootstrap.js.map" />
+    <Content Include="Scripts\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+    <Content Include="Scripts\lib\bootstrap\LICENSE" />
+    <Content Include="Scripts\lib\jquery\dist\jquery.min.map" />
+    <Content Include="Scripts\lib\jquery-validation\LICENSE.md" />
+    <Content Include="Scripts\lib\theme\plugins\dropify\fonts\dropify.eot" />
+    <Content Include="Scripts\lib\theme\plugins\dropify\fonts\dropify.ttf" />
+    <Content Include="Scripts\lib\theme\plugins\dropify\fonts\dropify.woff" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\fontawesome\webfonts\fa-regular-400.eot" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\fontawesome\webfonts\fa-regular-400.ttf" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\fontawesome\webfonts\fa-regular-400.woff" />
+    <Content Include="Scripts\lib\theme\plugins\font-icons\fontawesome\webfonts\fa-regular-400.woff2" />
+    <Content Include="Views\Shared\LayoutComponents\_Footer.cshtml" />
+    <Content Include="Views\Shared\LayoutComponents\_NavBar.cshtml" />
+    <Content Include="Views\Shared\LayoutComponents\_SideBar.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Code\" />
+    <Folder Include="App_Data\Logs\" />
+    <Folder Include="RecursosLocalizables\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\..\packages\Microsoft.Net.Compilers.2.8.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.Net.Compilers.2.8.0\build\Microsoft.Net.Compilers.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,139 @@
+﻿<div class="sidebar" data-active-color="white" data-background-color="gray">
+    <div class="logo">
+        <a href="#" class="simple-text">
+            <img class="img-responsive" src="~/Images/logo.png" />
+        </a>
+    </div>
+    <div class="sidebar-wrapper">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-toggle="collapse" href="#formularios_ss" aria-expanded="false">
+                    <i class="material-icons">content_paste</i>
+                    <p>@$safeprojectname$.RecursosLocalizables.StringResources.LblMenuSinSegmentos<b class="caret"></b></p>
+                </a>
+                <div class="collapse" id="formularios_ss" style="">
+                    <ul class="nav">
+                        <li class="nav-item menu-item ">
+                            <a class="nav-link" href="@Url.Action("PD", "NoSegmentos")" data-menu="formularios_ss">
+                                <p>@$safeprojectname$.RecursosLocalizables.StringResources.LblMenuPD</p>
+                            </a>
+                        </li>
+                        <li class="nav-item menu-item ">
+                            <a class="nav-link" href="@Url.Action("EAD", "NoSegmentos")" data-menu="formularios_ss">
+                                <p>@$safeprojectname$.RecursosLocalizables.StringResources.LblMenuEAD</p>
+                            </a>
+                        </li>
+                        <li class="nav-item menu-item ">
+                            <a class="nav-link" href="@Url.Action("LGD", "NoSegmentos")" data-menu="formularios_ss">
+                                <p>@$safeprojectname$.RecursosLocalizables.StringResources.LblMenuLGD</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-toggle="collapse" href="#formularios" aria-expanded="false">
+                    <i class="material-icons">content_paste</i>
+                    <p>@$safeprojectname$.RecursosLocalizables.StringResources.LblMenuCalculos<b class="caret"></b></p>
+                </a>
+                <div class="collapse" id="formularios" style="">
+                    <ul class="nav">
+                        <li class="nav-item menu-item ">
+                            <a class="nav-link" href="@Url.Action("PD", "Revision")" data-menu="formularios">
+                                <p>@$safeprojectname$.RecursosLocalizables.StringResources.LblMenuPD</p>
+                            </a>
+                        </li>
+                        <li class="nav-item menu-item ">
+                            <a class="nav-link" href="@Url.Action("EAD", "Revision")" data-menu="formularios">
+                                <p>@$safeprojectname$.RecursosLocalizables.StringResources.LblMenuEAD</p>
+                            </a>
+                        </li>
+                        <li class="nav-item menu-item ">
+                            <a class="nav-link" href="@Url.Action("LGD", "Revision")" data-menu="formularios">
+                                <p>@$safeprojectname$.RecursosLocalizables.StringResources.LblMenuLGD</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-toggle="collapse" href="#MenuCatalogos" aria-expanded="false">
+                    <i class="material-icons">work</i>
+                    <p>@$safeprojectname$.RecursosLocalizables.StringResources.LblMenuCatalogos<b class="caret"></b></p>
+                </a>
+                <div class="collapse" id="MenuCatalogos" style="">
+                    <ul class="nav">
+                        <li class="nav-item menu-item ">
+                            <a class="nav-link" href="@Url.Action("Index", "Segmento")" data-menu="MenuCatalogos">
+                                <p>@$safeprojectname$.RecursosLocalizables.StringResources.LblMenuSegmentos</p>
+                            </a>
+                        </li>
+                        <li class="nav-item menu-item ">
+                            <a class="nav-link" href="@Url.Action("Index", "Compania")" data-menu="MenuCatalogos">
+                                <p>@$safeprojectname$.RecursosLocalizables.StringResources.LblMenuCompania</p>
+                            </a>
+                        </li>
+                        <li class="nav-item menu-item ">
+                            <a class="nav-link" href="@Url.Action("Index", "Banca")" data-menu="MenuCatalogos">
+                                <p>@$safeprojectname$.RecursosLocalizables.StringResources.LblMenuBanca</p>
+                            </a>
+                        </li>
+                        <li class="nav-item menu-item ">
+                            <a class="nav-link" href="@Url.Action("Index", "Tratamiento")" data-menu="MenuCatalogos">
+                                <p>@$safeprojectname$.RecursosLocalizables.StringResources.LblMenuTratamiento</p>
+                            </a>
+                        </li>
+                        <li class="nav-item menu-item ">
+                            <a class="nav-link" href="@Url.Action("Index", "Sistemas")" data-menu="MenuCatalogos">
+                                <p>@$safeprojectname$.RecursosLocalizables.StringResources.LblMenuSistemas</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-toggle="collapse" href="#MenuMantenimientos" aria-expanded="false">
+                    <i class="material-icons">build</i>
+                    <p>@$safeprojectname$.RecursosLocalizables.StringResources.LblMenuMantenimientos<b class="caret"></b></p>
+                </a>
+                <div class="collapse" id="MenuMantenimientos" style="">
+                    <ul class="nav">
+                        <li class="nav-item menu-item ">
+                            <a class="nav-link" href="@Url.Action("Index", "OpeSegmento")" data-menu="MenuMantenimientos">
+                                <p>@$safeprojectname$.RecursosLocalizables.StringResources.LblMenuMantSegmentos</p>
+                            </a>
+                        </li>
+                        <li class="nav-item menu-item ">
+                            <a class="nav-link" href="@Url.Action("Index", "OpeCompania")" data-menu="MenuMantenimientos">
+                                <p>@$safeprojectname$.RecursosLocalizables.StringResources.LblMenuMantCompania</p>
+                            </a>
+                        </li>
+                        <li class="nav-item menu-item ">
+                            <a class="nav-link" href="@Url.Action("Index", "OpeTratamiento")" data-menu="MenuMantenimientos">
+                                <p>@$safeprojectname$.RecursosLocalizables.StringResources.LblMenuMantTratamiento</p>
+                            </a>
+                        </li>
+                        <li class="nav-item menu-item ">
+                            <a class="nav-link" href="@Url.Action("Index", "Correo")" data-menu="MenuMantenimientos">
+                                <p>@$safeprojectname$.RecursosLocalizables.StringResources.LblMenuMantCorreo</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item menu-item ">
+                <a class="nav-link" href="@Url.Action("Index", "Modificaciones")">
+                    <i class="material-icons">loop</i>
+                    <p>@$safeprojectname$.RecursosLocalizables.StringResources.LblMenuModificaciones</p>
+                </a>
+            </li>
+            <li class="nav-item menu-item ">
+                <a class="nav-link" href="@Url.Action("Index", "CargaDatos")">
+                    <i class="material-icons">unarchive</i>
+                    <p>@$safeprojectname$.RecursosLocalizables.StringResources.LblMenuCargaDatos</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
