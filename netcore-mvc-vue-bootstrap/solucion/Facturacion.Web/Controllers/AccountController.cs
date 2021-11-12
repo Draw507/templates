@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Facturacion.Entities;
 using Facturacion.Repository.Contexts;
@@ -23,8 +21,14 @@ namespace Facturacion.Web.Controllers
             this.signInManager = signInManager;
         }
 
+        [HttpGet]
+        public IActionResult Users()
+        {
+            return View($"~/Views/Account/{nameof(AccountController.Users)}/Index.cshtml");
+        }
+
         [HttpPost]
-        public async Task<ActionResult> Register(UserRegister model)
+        public async Task<ActionResult> Register([FromBody] UserRegister model)
         {
             var response = new CommonResponse();
             var user = new ApplicationUser
@@ -63,7 +67,7 @@ namespace Facturacion.Web.Controllers
         {
             ViewData["ReturnUrl"] = returnUrl;
 
-            var result = await signInManager.PasswordSignInAsync(userLogin.Email, userLogin.Password, isPersistent: false, lockoutOnFailure: false);
+            var result = await signInManager.PasswordSignInAsync(userLogin.Email, userLogin.Password, userLogin.IsPersistent, lockoutOnFailure: false);
 
             if (result.Succeeded)
             {
@@ -76,7 +80,7 @@ namespace Facturacion.Web.Controllers
                     return Redirect("/");
                 }
             }
-            
+
             ModelState.AddModelError(nameof(userLogin.Email), "Login Failed: Invalid Email or password");
 
             return View(userLogin);
@@ -85,7 +89,7 @@ namespace Facturacion.Web.Controllers
         public async Task<IActionResult> LogOut(string returnUrl = null)
         {
             await signInManager.SignOutAsync();
-            
+
             if (returnUrl != null)
             {
                 return LocalRedirect(returnUrl);

@@ -1,42 +1,42 @@
-﻿using Facturacion.Entities;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Facturacion.Entities;
 using Facturacion.Entities.DTO;
 using Facturacion.Entities.ViewModels;
-using Facturacion.Repository.Interfaces;
+using Facturacion.Repository.Contexts;
 using Facturacion.Service.Interfaces;
 using Facturacion.Utils;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Facturacion.Service
 {
     public class Contactos : IContactos
     {
-        private readonly IUnitOfWork unitOfWork;
-        private readonly ILogger<Contactos> logger;
+        private readonly ApplicationDbContext _applicationDbContext;
+        private readonly ILogger<Bodegas> _logger;
 
-        public Contactos(IUnitOfWork unitOfWork, ILogger<Contactos> logger)
+        public Contactos(ApplicationDbContext applicationDbContext, ILogger<Bodegas> logger)
         {
-            this.unitOfWork = unitOfWork;
-            this.logger = logger;
+            _applicationDbContext = applicationDbContext;
+            _logger = logger;
         }
 
         public async Task<CommonResponse<IEnumerable<ClienteDTO>>> GetClientes()
         {
-            var response = new CommonResponse<IEnumerable<ClienteDTO>>();
-            response.Data = await unitOfWork.Clientes
-                                .GetAll()
+            var response = new CommonResponse<IEnumerable<ClienteDTO>>
+            {
+                Data = await _applicationDbContext.Cliente
+                                .AsNoTracking()
                                 .Select(s => new ClienteDTO
                                 {
                                     Nombre = s.Nombre
                                 })
-                                .ToListAsync();
+                                .ToListAsync(),
 
-            response.Status = CommonResponseTypeStatus.success.ToString();
+                Status = CommonResponseTypeStatus.success.ToString()
+            };
 
             return response;
         }
@@ -44,7 +44,7 @@ namespace Facturacion.Service
         public IEnumerable<ClienteDTO> GetClientes(GridRequest<ContactosFilters> gridRequest)
         {
             //Consulta
-            var query = unitOfWork.Clientes.AsQueryable()
+            var query = _applicationDbContext.Cliente.AsQueryable()
                         .Select(s => new
                         {
                             s.ClienteId,
@@ -63,9 +63,9 @@ namespace Facturacion.Service
             //OrderBy
             if (gridRequest.order != null)
             {
-                int ColumnIndex = gridRequest.order.First().column;
-                string ColumnName = gridRequest.columns[ColumnIndex].data;
-                ORDER ColumnOrder = gridRequest.order.First().dir.ToUpper() == "ASC" ? ORDER.ASC : ORDER.DESC;
+                var ColumnIndex = gridRequest.order.First().column;
+                var ColumnName = gridRequest.columns[ColumnIndex].data;
+                var ColumnOrder = gridRequest.order.First().dir.ToUpper() == "ASC" ? ORDER.ASC : ORDER.DESC;
 
                 ColumnName = new ClienteDTO().GetDBNamePropertyAttributeInSearch(ColumnName);
 
@@ -76,7 +76,7 @@ namespace Facturacion.Service
                 query = query.OrderBy(o => o.Nombre);
             }
 
-            int count = query.Count();
+            var count = query.Count();
 
             var results = query
                          .GetPage(gridRequest.page, gridRequest.length)

@@ -4,6 +4,9 @@
     "inputFiles": [
       "wwwroot/lib/bootstrap/bootstrap.min.css",
       "wwwroot/lib/perfect-scrollbar/perfect-scrollbar.css",
+      "wwwroot/lib/cork/plugins/sweetalert2.min.css",
+      "wwwroot/lib/cork/plugins/sweetalert.css",
+      "wwwroot/lib/animate/animate.min.css",
       "wwwroot/lib/cork/main.css",
       "wwwroot/lib/cork/structure.css",
       "wwwroot/lib/highlight/styles/monokai-sublime.css",
@@ -17,6 +20,8 @@
       "wwwroot/lib/bootstrap/popper.min.js",
       "wwwroot/lib/bootstrap/bootstrap.min.js",
       "wwwroot/lib/perfect-scrollbar/perfect-scrollbar.min.js",
+      "wwwroot/lib/cork/plugins/sweetalert2.min.js",
+      "wwwroot/lib/cork/plugins/toastr.min.js",
       "wwwroot/lib/cork/app.js",
       "wwwroot/lib/cork/custom.js",
       "wwwroot/lib/axios/axios.js",

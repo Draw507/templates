@@ -9,6 +9,9 @@
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/bootstrap.min.css" />
         <link rel="stylesheet" href="~/lib/perfect-scrollbar/perfect-scrollbar.css" />
+        <link rel="stylesheet" href="~/lib/cork/plugins/sweetalert2.min.css" />
+        <link rel="stylesheet" href="~/lib/cork/plugins/sweetalert.css" />
+        <link rel="stylesheet" href="~/lib/animate/animate.min.css" />
         <link rel="stylesheet" href="~/lib/cork/main.css" />
         <link rel="stylesheet" href="~/lib/cork/structure.css" />
         <link rel="stylesheet" href="~/lib/highlight/styles/monokai-sublime.css" />
@@ -33,12 +36,15 @@
             <partial name="~/Views/Shared/Layout/_Footer.cshtml" />
         </div>
     </div>
+    <input id="basePath" type="hidden" value="@Url.Content("~/")" />
     <partial name="_Loading" />
     <environment include="Development">
         <script src="~/lib/jquery/jquery-3.1.1.min.js"></script>
         <script src="~/lib/bootstrap/popper.min.js"></script>
         <script src="~/lib/bootstrap/bootstrap.min.js"></script>
         <script src="~/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+        <script src="~/lib/cork/plugins/sweetalert2.min.js"></script>
+        <script src="~/lib/cork/plugins/toastr.js"></script>
         <script src="~/lib/cork/app.js"></script>
         <script src="~/lib/cork/custom.js"></script>
         <script src="~/lib/axios/axios.js"></script>

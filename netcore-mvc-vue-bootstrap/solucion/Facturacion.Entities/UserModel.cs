@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Facturacion.Entities
+﻿namespace Facturacion.Entities
 {
     public class UserRegister
     {
@@ -14,5 +10,6 @@ namespace Facturacion.Entities
     {
         public string Email { get; set; }
         public string Password { get; set; }
+        public bool IsPersistent { get; set; }
     }
 }

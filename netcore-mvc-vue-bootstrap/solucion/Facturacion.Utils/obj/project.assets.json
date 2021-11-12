@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {
+    "net5.0": {
       "Microsoft.ApplicationInsights/2.14.0": {
         "type": "package",
         "dependencies": {
@@ -2298,7 +2298,7 @@
       },
       "Facturacion.Entities/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
+        "framework": ".NETCoreApp,Version=v5.0",
         "compile": {
           "bin/placeholder/Facturacion.Entities.dll": {}
         },
@@ -2856,6 +2856,7 @@
       "path": "microsoft.extensions.platformabstractions/1.1.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "lib/net451/Microsoft.Extensions.PlatformAbstractions.dll",
         "lib/net451/Microsoft.Extensions.PlatformAbstractions.xml",
         "lib/netstandard1.3/Microsoft.Extensions.PlatformAbstractions.dll",
@@ -5351,6 +5352,7 @@
       "path": "system.reflection.metadata/1.4.1",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.1/System.Reflection.Metadata.dll",
@@ -7366,7 +7368,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": [
+    "net5.0": [
       "Facturacion.Entities >= 1.0.0",
       "Microsoft.ApplicationInsights.AspNetCore >= 2.14.0",
       "Microsoft.ApplicationInsights.DependencyCollector >= 2.14.0",
@@ -7375,40 +7377,34 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LogicStudio\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\LENOVO\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\projects\\drobinson\\templates\\netcore-mvc-vue-bootstrap\\solucion\\Facturacion.Utils\\Facturacion.Utils.csproj",
+      "projectUniqueName": "C:\\Users\\drobinson\\Desktop\\drobinson\\projects\\administracion\\Facturacion.Utils\\Facturacion.Utils.csproj",
       "projectName": "Facturacion.Utils",
-      "projectPath": "C:\\projects\\drobinson\\templates\\netcore-mvc-vue-bootstrap\\solucion\\Facturacion.Utils\\Facturacion.Utils.csproj",
-      "packagesPath": "C:\\Users\\LogicStudio\\.nuget\\packages\\",
-      "outputPath": "C:\\projects\\drobinson\\templates\\netcore-mvc-vue-bootstrap\\solucion\\Facturacion.Utils\\obj\\",
+      "projectPath": "C:\\Users\\drobinson\\Desktop\\drobinson\\projects\\administracion\\Facturacion.Utils\\Facturacion.Utils.csproj",
+      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\drobinson\\Desktop\\drobinson\\projects\\administracion\\Facturacion.Utils\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\LogicStudio\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "netcoreapp3.1"
+        "net5.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "netcoreapp3.1": {
+        "net5.0": {
+          "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\projects\\drobinson\\templates\\netcore-mvc-vue-bootstrap\\solucion\\Facturacion.Entities\\Facturacion.Entities.csproj": {
-              "projectPath": "C:\\projects\\drobinson\\templates\\netcore-mvc-vue-bootstrap\\solucion\\Facturacion.Entities\\Facturacion.Entities.csproj"
+            "C:\\Users\\drobinson\\Desktop\\drobinson\\projects\\administracion\\Facturacion.Entities\\Facturacion.Entities.csproj": {
+              "projectPath": "C:\\Users\\drobinson\\Desktop\\drobinson\\projects\\administracion\\Facturacion.Entities\\Facturacion.Entities.csproj"
             }
           }
         }
@@ -7420,7 +7416,8 @@
       }
     },
     "frameworks": {
-      "netcoreapp3.1": {
+      "net5.0": {
+        "targetAlias": "net5.0",
         "dependencies": {
           "Microsoft.ApplicationInsights.AspNetCore": {
             "target": "Package",
@@ -7454,7 +7451,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

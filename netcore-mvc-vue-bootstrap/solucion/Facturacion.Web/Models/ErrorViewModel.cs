@@ -1,6 +1,4 @@
-using System;
-
-namespace Facturacion.Web.Models
+﻿namespace Facturacion.Web.Models
 {
     public class ErrorViewModel
     {

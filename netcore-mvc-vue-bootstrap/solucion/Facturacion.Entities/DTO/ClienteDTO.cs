@@ -1,7 +1,5 @@
-﻿using Facturacion.Entities.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
+using Facturacion.Entities.ViewModels;
 
 namespace Facturacion.Entities.DTO
 {

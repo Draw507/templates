@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Diagnostics;
+﻿using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Facturacion.Web.Controllers
@@ -12,7 +8,7 @@ namespace Facturacion.Web.Controllers
         [Route("Error/500")]
         public IActionResult Error500()
         {
-            var i = HttpContext.Items["isVerified"];
+            _ = HttpContext.Items["isVerified"];
 
             var exceptionFeature = HttpContext.Features.Get<IExceptionHandlerPathFeature>();
 

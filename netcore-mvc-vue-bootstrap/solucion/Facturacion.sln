@@ -5,13 +5,13 @@ VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Facturacion.Web", "Facturacion.Web\Facturacion.Web.csproj", "{8DDEA1D4-0951-4303-9A69-E9962E4753C8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Facturacion.Entities", "Facturacion.Entities\Facturacion.Entities.csproj", "{A6A44294-163D-4EFF-9E27-365937F5B343}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facturacion.Entities", "Facturacion.Entities\Facturacion.Entities.csproj", "{A6A44294-163D-4EFF-9E27-365937F5B343}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Facturacion.Repository", "Facturacion.Repository\Facturacion.Repository.csproj", "{9986DE95-9985-462C-835B-3F07034E3265}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Facturacion.Utils", "Facturacion.Utils\Facturacion.Utils.csproj", "{B782516E-1155-4545-AE65-2F3C93066CF1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facturacion.Utils", "Facturacion.Utils\Facturacion.Utils.csproj", "{B782516E-1155-4545-AE65-2F3C93066CF1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Facturacion.Business", "Facturacion.Service\Facturacion.Business.csproj", "{81B139E6-D487-407B-B038-6317D2DD47C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facturacion.Service", "Facturacion.Service\Facturacion.Service.csproj", "{81B139E6-D487-407B-B038-6317D2DD47C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

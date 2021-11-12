@@ -71,19 +71,19 @@
     let functionToExecute;
     let parametros;
     let dom = {};
-    //let toast = swal.mixin({
-    //    toast: true,
-    //    position: "top-end",
-    //    showClass: {
-    //        popup: 'animate__animated animate__fadeInRight'
-    //    },
-    //    hideClass: {
-    //        popup: 'animate__animated animate__fadeOutRight',
-    //    },
-    //    showConfirmButton: false,
-    //    timer: 4000,
-    //    padding: "2em",
-    //});
+    let toast = swal.mixin({
+        toast: true,
+        position: "top-end",
+        showClass: {
+            popup: 'animate__animated animate__fadeInRight'
+        },
+        hideClass: {
+            popup: 'animate__animated animate__fadeOutRight',
+        },
+        showConfirmButton: false,
+        timer: 4000,
+        padding: "2em",
+    });
     let catchDom = function () {
         dom.lnkLogOut = $(st.lnkLogOut);
         dom.modalSmall = $(st.modalSmall);
@@ -194,13 +194,13 @@
             padding: "2em",
         });
     };
-    let swalNotification = function (title, text, icon) {
+    let swalNotification = function (title, text, type) {
         Swal.fire({
-            icon: icon,
+            type: type,
             title: title,
             text: text,
             width: 400,
-            padding: '0.1em'
+            padding: '1em'
         });
     };
     let showLoading = function () {
@@ -214,7 +214,7 @@
         setTimeout(() => $("#app-loading").addClass('d-none'), ms);
     };
     let IniciarComponentes = function () {
-        //$('[data-toggle="tooltip"]').tooltip();
+        $('[data-toggle="tooltip"]').tooltip();
         //toastr.options = {
         //    "closeButton": true,
         //    "showDuration": "500",

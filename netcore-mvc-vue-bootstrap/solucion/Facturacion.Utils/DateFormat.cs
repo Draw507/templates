@@ -8,7 +8,7 @@ namespace Facturacion.Utils
     {
         public static string MonthName(int month)
         {
-            DateTimeFormatInfo dtinfo = new CultureInfo("es-ES", false).DateTimeFormat;
+            var dtinfo = new CultureInfo("es-ES", false).DateTimeFormat;
             return dtinfo.GetMonthName(month);
         }
 

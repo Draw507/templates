@@ -200,7 +200,7 @@ var App = function() {
         onRefresh: function() {
             var windowWidth = window.innerWidth;
             if ( windowWidth > MediaSize.md ) {
-                categoryScroll.scrollCat();
+                //categoryScroll.scrollCat();
                 toggleFunction.sidebar(true);
                 toggleFunction.onToggleSidebarSubmenu();
             }

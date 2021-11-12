@@ -1,10 +1,7 @@
-﻿using Facturacion.Entities.AttributesProperties;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Globalization;
 using System.Linq;
-using System.Reflection;
-using System.Text;
+using Facturacion.Entities.AttributesProperties;
 
 namespace Facturacion.Utils
 {
@@ -13,15 +10,15 @@ namespace Facturacion.Utils
         public static string GetDBNamePropertyAttributeInSearch<T>(this T source, string propertyName)
             where T : class
         {
-            Type sourceType = source.GetType();
-            string data = propertyName;
+            var sourceType = source.GetType();
+            var data = propertyName;
 
-            foreach (PropertyInfo p in sourceType.GetProperties())
+            foreach (var p in sourceType.GetProperties())
             {
                 //foreach (Attribute a in p.GetCustomAttributes(false))
                 foreach (Attribute a in p.GetCustomAttributes(typeof(OrderByDBAttributes), false).OfType<OrderByDBAttributes>())
                 {
-                    OrderByDBAttributes CustomAttribute = (OrderByDBAttributes)a;
+                    var CustomAttribute = (OrderByDBAttributes)a;
 
                     if (p.Name.ToUpper() == propertyName.ToUpper())
                     {

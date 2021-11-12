@@ -1,4 +1,22 @@
-﻿/*SPINNER - START*/
+﻿/*TABLE - START*/
+.style-3 .table-controls {
+    padding: 0;
+    margin-bottom: 0.3rem !important;
+}
+.style-3 .table-controls li {
+    list-style: none;
+    display: inline;
+}
+    .style-3 .table-controls li svg {
+        color: #888ea8;
+        vertical-align: middle;
+        width: 28px;
+        height: 28px;
+        fill: rgba(0, 23, 55, 0.08);
+        cursor: pointer;
+    }
+/*TABLE - END*/
+/*SPINNER - START*/
 .loading {
     position: fixed;
     top: 0;

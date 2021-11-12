@@ -1,36 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\projects\\drobinson\\templates\\netcore-mvc-vue-bootstrap\\solucion\\Facturacion.Entities\\Facturacion.Entities.csproj": {}
+    "C:\\Users\\drobinson\\Desktop\\drobinson\\projects\\administracion\\Facturacion.Entities\\Facturacion.Entities.csproj": {}
   },
   "projects": {
-    "C:\\projects\\drobinson\\templates\\netcore-mvc-vue-bootstrap\\solucion\\Facturacion.Entities\\Facturacion.Entities.csproj": {
+    "C:\\Users\\drobinson\\Desktop\\drobinson\\projects\\administracion\\Facturacion.Entities\\Facturacion.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\projects\\drobinson\\templates\\netcore-mvc-vue-bootstrap\\solucion\\Facturacion.Entities\\Facturacion.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\drobinson\\Desktop\\drobinson\\projects\\administracion\\Facturacion.Entities\\Facturacion.Entities.csproj",
         "projectName": "Facturacion.Entities",
-        "projectPath": "C:\\projects\\drobinson\\templates\\netcore-mvc-vue-bootstrap\\solucion\\Facturacion.Entities\\Facturacion.Entities.csproj",
-        "packagesPath": "C:\\Users\\LogicStudio\\.nuget\\packages\\",
-        "outputPath": "C:\\projects\\drobinson\\templates\\netcore-mvc-vue-bootstrap\\solucion\\Facturacion.Entities\\obj\\",
+        "projectPath": "C:\\Users\\drobinson\\Desktop\\drobinson\\projects\\administracion\\Facturacion.Entities\\Facturacion.Entities.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\drobinson\\Desktop\\drobinson\\projects\\administracion\\Facturacion.Entities\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\LogicStudio\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -41,7 +37,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
+        "net5.0": {
+          "targetAlias": "net5.0",
           "imports": [
             "net461",
             "net462",
@@ -57,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

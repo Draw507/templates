@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dZfKd3XLHrtqrCIEYLSS1bO6rQkn8VuARQf0xoJcuAmROLVmnmZJo9ldI2v53BDl/KVJAEbH/1IX4zuEFebABA==",
+  "dgSpecHash": "wGZp9eeg22t2yJa/TNm652hPyEOSk55esYyGKJdKi/SLffmrX1qnf/sUnp9g2zU/DaTsKsDA/AlnqA6oELHkbw==",
   "success": true,
-  "projectFilePath": "C:\\projects\\drobinson\\templates\\netcore-mvc-vue-bootstrap\\solucion\\Facturacion.Entities\\Facturacion.Entities.csproj",
+  "projectFilePath": "C:\\Users\\drobinson\\Desktop\\drobinson\\projects\\administracion\\Facturacion.Entities\\Facturacion.Entities.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

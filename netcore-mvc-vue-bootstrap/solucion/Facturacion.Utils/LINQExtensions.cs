@@ -29,7 +29,7 @@ namespace Facturacion.Utils
         public static IQueryable<TEntity> OrderBy<TEntity>(this IQueryable<TEntity> source, string orderByProperty,
                           ORDER order)
         {
-            string command = order == ORDER.DESC ? "OrderByDescending" : "OrderBy";
+            var command = order == ORDER.DESC ? "OrderByDescending" : "OrderBy";
             var type = typeof(TEntity);
             var property = type.GetProperty(orderByProperty);
             var parameter = Expression.Parameter(type, "p");
@@ -43,7 +43,7 @@ namespace Facturacion.Utils
         public static IQueryable<TEntity> ThenBy<TEntity>(this IQueryable<TEntity> source, string orderByProperty,
                           THENBY order)
         {
-            string command = order == THENBY.DESC ? "ThenByDescending" : "ThenBy";
+            var command = order == THENBY.DESC ? "ThenByDescending" : "ThenBy";
             var type = typeof(TEntity);
             var property = type.GetProperty(orderByProperty);
             var parameter = Expression.Parameter(type, "p");
@@ -68,8 +68,8 @@ namespace Facturacion.Utils
         public static IEnumerable<TSource> DistinctBy<TSource, TKey>(this IEnumerable<TSource> source,
             Func<TSource, TKey> keySelector)
         {
-            HashSet<TKey> seenKeys = new HashSet<TKey>();
-            foreach (TSource element in source)
+            var seenKeys = new HashSet<TKey>();
+            foreach (var element in source)
             {
                 if (seenKeys.Add(keySelector(element)))
                 {

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Facturacion.Entities
+﻿namespace Facturacion.Entities
 {
     public class ErrorDetails
     {

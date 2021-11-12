@@ -1,16 +1,15 @@
-﻿using Facturacion.Entities;
+﻿using System;
+using System.Linq;
+using System.Net;
+using System.Text;
+using System.Threading.Tasks;
+using Facturacion.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Facturacion.Web.Extensions
 {
@@ -27,7 +26,7 @@ namespace Facturacion.Web.Extensions
                     {
                         ContractResolver = new DefaultContractResolver
                         {
-                            NamingStrategy = new CamelCaseNamingStrategy()
+                            NamingStrategy = null
                         }
                     };
                     var exceptionFeature = context.Features.Get<IExceptionHandlerPathFeature>();
@@ -35,11 +34,11 @@ namespace Facturacion.Web.Extensions
                     var path = exceptionFeature.Path;
                     var guid = Guid.NewGuid().ToString();
 
-                    string errorDetails = $@"{exception.Message}
+                    var errorDetails = $@"{exception.Message}
                                          {Environment.NewLine}
                                          {exception.StackTrace}";
 
-                    int statusCode = (int)HttpStatusCode.OK;
+                    var statusCode = (int)HttpStatusCode.OK;
 
                     context.Response.StatusCode = statusCode;
 
@@ -68,7 +67,7 @@ namespace Facturacion.Web.Extensions
                     //============================================================
                     var matchText = "JSON";
 
-                    bool requiresJsonResponse = context.Request
+                    var requiresJsonResponse = context.Request
                                                         .GetTypedHeaders()
                                                         .Accept
                                                         .Any(t => t.Suffix.Value?.ToUpper() == matchText

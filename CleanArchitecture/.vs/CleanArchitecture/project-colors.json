@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "3f43f5b5-7e63-4681-9049-b15f7af79785": {
+      "ProjectGuid": "3f43f5b5-7e63-4681-9049-b15f7af79785",
+      "DisplayName": "WebUI",
+      "ColorIndex": 0
+    },
+    "14233104-3a24-40aa-92d5-e95fc3931c39": {
+      "ProjectGuid": "14233104-3a24-40aa-92d5-e95fc3931c39",
+      "DisplayName": "Domain",
+      "ColorIndex": 1
+    },
+    "84a2de1f-1ebb-4d5f-8e18-859d0b6e718f": {
+      "ProjectGuid": "84a2de1f-1ebb-4d5f-8e18-859d0b6e718f",
+      "DisplayName": "Application",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

@@ -29,7 +29,6 @@
                 <div class="form-container">
                     <div class="form-content">
                         <h1 class="">Log In to <a href="javascript:void(0);"><span class="brand-name">CORK</span></a></h1>
-                        <p class="signup-link">New Here? <a href="auth_register.html">Create an account</a></p>
                         <div class="text-danger" asp-validation-summary="All"></div>
                         <form class="text-left" asp-controller="Account" asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]" role="form">
                             <div class="form">
@@ -57,7 +56,7 @@
                                 <div class="field-wrapper text-center keep-logged-in">
                                     <div class="n-chk new-checkbox checkbox-outline-primary">
                                         <label class="new-control new-checkbox checkbox-outline-primary">
-                                            <input type="checkbox" class="new-control-input">
+                                            <input type="checkbox" name="IsPersistent" value="true" class="new-control-input">
                                             <span class="new-control-indicator"></span>Keep me logged in
                                         </label>
                                     </div>
@@ -85,9 +84,6 @@
         <script src="~/lib/bootstrap/popper.min.js"></script>
         <script src="~/lib/bootstrap/bootstrap.min.js"></script>
         <script src="~/lib/cork/authentication/form-1.js"></script>
-        <script src="~/lib/axios/axios.js"></script>
-        <script src="~/lib/vue/vue-dev.js"></script>
-        <script src="~/js/app.js"></script>
     </environment>
 </body>
 </html>

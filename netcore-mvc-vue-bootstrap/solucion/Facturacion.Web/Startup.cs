@@ -1,19 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System;
+using Facturacion.Repository;
+using Facturacion.Service;
+using Facturacion.Web.Extensions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.Extensions.Logging;
-using Facturacion.Web.Extensions;
-using Facturacion.Repository;
-using Facturacion.Service;
-using Newtonsoft.Json.Serialization;
 
 namespace Facturacion.Web
 {
@@ -31,10 +26,28 @@ namespace Facturacion.Web
         {
             services.AddServices(Configuration);
             services.AddRepository(Configuration);
+            services.ConfigureApplicationCookie(options =>
+            {
+                // Cookie settings
+                options.Cookie.HttpOnly = true;
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+
+                options.LoginPath = "/Account/Login";
+                options.AccessDeniedPath = "/Account/AccessDenied";
+                options.SlidingExpiration = true;
+            });
+
+            services.AddAuthorization(options =>
+            {
+                options.FallbackPolicy = new AuthorizationPolicyBuilder()
+                    .RequireAuthenticatedUser()
+                    .Build();
+            });
 
             var mvc = services
                 .AddControllersWithViews()
-                .AddNewtonsoftJson(o => o.SerializerSettings.ContractResolver = new DefaultContractResolver());
+                .AddJsonOptions(options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
+
 #if (DEBUG)
             mvc.AddRazorRuntimeCompilation();
 #endif
@@ -53,7 +66,7 @@ namespace Facturacion.Web
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
